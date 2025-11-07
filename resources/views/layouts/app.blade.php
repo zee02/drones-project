@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title>Venue - Responsive Web Template</title> 
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        
+        {{-- MODERNIZR (ASSET ESTÁTICO) --}}
+        <script src="{{ asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
+
+        {{-- VITE: Carrega todo o CSS e JS --}}
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    </head>
+
+    <body>
+        <div class="wrap">
+            {{-- HEADER/NAVBAR INCLUÍDO --}}
+            @include('layouts.header')
+        </div>
+
+        <main>
+            {{-- CONTEÚDO DA PÁGINA (home.blade.php) --}}
+            @yield('content')
+        </main>
+
+        {{-- FOOTER INCLUÍDO --}}
+        @include('layouts.footer')
+    </body>
+</html>

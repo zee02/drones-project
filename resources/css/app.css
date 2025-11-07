@@ -1,0 +1,37 @@
+/* ==================================== */
+/* 1. IMPORTS DE FRAMEWORKS EXTERNOS (DEVE SER O PRIMEIRO) */
+/* ==================================== */
+
+/* Importação do Owl Carousel e Tema (Usando a sintaxe npm '~') */
+@import url("owl.carousel/dist/assets/owl.carousel.css");
+@import url("owl.carousel/dist/assets/owl.theme.default.css"); 
+
+/* Imports dos arquivos CSS do seu template */
+@import './bootstrap.min.css';
+@import './bootstrap-theme.min.css';
+@import './fontAwesome.css'; 
+
+/* Outros plugins CSS do template */
+@import './hero-slider.css';
+@import './datepicker.css';
+@import './templatemo-style.css';
+
+
+/* ==================================== */
+/* 2. TAILWIND CSS (DEPOIS de todos os @imports) */
+/* ==================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================================== */
+/* 3. REGRAS CUSTOMIZADAS (Opcional, no final) */
+/* ==================================== */
+/* Coloque qualquer CSS que não seja @import ou @tailwind aqui */
+
+/* As declarações @property --tw-rotate-x { ... } que causavam o erro,
+   são geradas pelo Tailwind e agora virão DEPOIS dos imports. */
+
+
+   
