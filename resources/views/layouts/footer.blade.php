@@ -4,9 +4,11 @@
             <div class="col-md-5">
                 <div class="about-veno">
                     <div class="logo">
-                        <img src="{{ asset('img/footer_logo.png') }}" alt="Venue Logo">
+                        {{-- [TRADUZIDO] --}}
+                        <img src="{{ asset('img/footer_logo.png') }}" alt="{{ __('messages.footer.logo_alt') }}">
                     </div>
-                    <p>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellus, id efficitur leo. In hac habitasse platea dictumst.</p>
+                    {{-- [TRADUZIDO] (Substituir este texto lorem ipsum nos lang files) --}}
+                    <p>{{ __('messages.footer.about_lorem') }}</p>
                     <ul class="social-icons">
                         <li>
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -21,25 +23,28 @@
             <div class="col-md-4">
                 <div class="useful-links">
                     <div class="footer-heading">
-                        <h4>Useful Links</h4>
+                        {{-- [TRADUZIDO] --}}
+                        <h4>{{ __('messages.footer.links_title') }}</h4>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <ul>
-                                <li><a href="#"><i class="fa fa-stop"></i>Help FAQs</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Register</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Login</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>My Profile</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>How It Works?</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>More About Us</a></li>
+                                {{-- [TRADUZIDO] --}}
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_faq') }}</a></li>
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_register') }}</a></li>
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_login') }}</a></li>
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_profile') }}</a></li>
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_how') }}</a></li>
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_about') }}</a></li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul>
-                                <li><a href="#"><i class="fa fa-stop"></i>Our Clients</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Partnerships</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Blog Entries</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Contact Us</a></li>
+                                {{-- [TRADUZIDO] --}}
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_clients') }}</a></li>
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_partners') }}</a></li>
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_blog') }}</a></li>
+                                <li><a href="#"><i class="fa fa-stop"></i>{{ __('messages.footer.links_contact') }}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -48,13 +53,16 @@
             <div class="col-md-3">
                 <div class="contact-info">
                     <div class="footer-heading">
-                        <h4>Contact Information</h4>
+                        {{-- [TRADUZIDO] --}}
+                        <h4>{{ __('messages.footer.contact_title') }}</h4>
                     </div>
-                    <p>Praesent iaculis gravida elementum. Proin fermentum neque facilisis semper pharetra. Sed vestibulum vehicula tincidunt.</p>
+                     {{-- [TRADUZIDO] (Substituir este texto lorem ipsum nos lang files) --}}
+                    <p>{{ __('messages.footer.contact_lorem') }}</p>
                     <ul>
-                        <li><span>Phone:</span><a href="#">010-050-0550</a></li>
-                        <li><span>Email:</span><a href="#">hi@company.co</a></li>
-                        <li><span>Address:</span><a href="#">company.co</a></li>
+                        {{-- [TRADUZIDO] --}}
+                        <li><span>{{ __('messages.footer.contact_phone') }}</span><a href="#">010-050-0550</a></li>
+                        <li><span>{{ __('messages.footer.contact_email') }}</span><a href="#">hi@company.co</a></li>
+                        <li><span>{{ __('messages.footer.contact_address') }}</span><a href="#">company.co</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,6 +71,6 @@
 </footer>
 
 <div class="sub-footer">
-    <p>Copyright © 2018 Company Name 
-    - Design: <a rel="nofollow" href="http://www.templatemo.com">Template Mo</a></p>
+    <p>{{ __('messages.footer.copyright', ['year' => '2018', 'company' => 'Company Name']) }}
+    - {{ __('messages.footer.design_by') }} <a rel="nofollow" href="http://www.templatemo.com">Template Mo</a></p>
 </div>

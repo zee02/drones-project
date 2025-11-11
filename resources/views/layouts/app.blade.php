@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -20,16 +21,15 @@
 
     <body>
         <div class="wrap">
-            {{-- HEADER/NAVBAR INCLUÍDO --}}
             @include('layouts.header')
         </div>
 
         <main>
-            {{-- CONTEÚDO DA PÁGINA (home.blade.php) --}}
             @yield('content')
         </main>
 
         {{-- FOOTER INCLUÍDO --}}
         @include('layouts.footer')
     </body>
+    
 </html>
