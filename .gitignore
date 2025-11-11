@@ -22,8 +22,8 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
-# Cache do Laravel que precisa ser ignorada
+
 /storage/framework/cache/*
 /storage/framework/sessions/*
 /storage/framework/testing/*
-/storage/framework/views/* <-- ESSENCIAL PARA RESOLVER O ERRO DE PERMISSÃO
+/storage/framework/views/* # <-- ESSENCIAL
