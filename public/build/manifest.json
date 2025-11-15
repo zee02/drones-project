@@ -1,0 +1,45 @@
+{
+  "node_modules/owl.carousel/dist/assets/owl.video.play.png": {
+    "file": "assets/owl.video.play-BJo37keB.png",
+    "src": "node_modules/owl.carousel/dist/assets/owl.video.play.png"
+  },
+  "public/fonts/fontawesome-webfont.eot": {
+    "file": "assets/fontawesome-webfont-G5YE5S7X.eot",
+    "src": "public/fonts/fontawesome-webfont.eot"
+  },
+  "public/fonts/fontawesome-webfont.svg": {
+    "file": "assets/fontawesome-webfont-D13rzr4g.svg",
+    "src": "public/fonts/fontawesome-webfont.svg"
+  },
+  "public/fonts/fontawesome-webfont.ttf": {
+    "file": "assets/fontawesome-webfont-CQDK8MU3.ttf",
+    "src": "public/fonts/fontawesome-webfont.ttf"
+  },
+  "public/fonts/fontawesome-webfont.woff": {
+    "file": "assets/fontawesome-webfont-CDK5bt4p.woff",
+    "src": "public/fonts/fontawesome-webfont.woff"
+  },
+  "public/fonts/fontawesome-webfont.woff2": {
+    "file": "assets/fontawesome-webfont-B-jkhYfk.woff2",
+    "src": "public/fonts/fontawesome-webfont.woff2"
+  },
+  "public/img/main_banner.jpg": {
+    "file": "assets/main_banner-RqaxoyEQ.jpg",
+    "src": "public/img/main_banner.jpg"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-4e15QRwI.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Bn-Pczek.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
