@@ -17,4 +17,12 @@ export default defineConfig({
             port: 5173,
         },
     },
+    
+    ssr: {
+        noExternal: ['owl.carousel'],
+    },
+    
+    optimizeDeps: {
+        include: ['jquery', 'owl.carousel', 'axios'],
+    },
 });
