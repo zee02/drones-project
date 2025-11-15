@@ -1058,7 +1058,6 @@ section.contact .section-heading {
     width: 60%;
     margin: 0 auto;
     background-color: #fff;
-    //background-color: #fff;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -1275,5 +1274,69 @@ footer .contact-info ul li a {
 
     footer .contact-info {
         margin-top: 60px;
+    }
+
+    /* --- Ajustes para o Banner em Ecrãs Pequenos --- */
+    @media (max-width: 767px) {
+        /* Diminuir o preenchimento do banner */
+        .banner .banner-caption {
+            padding: 100px 20px 50px 20px;
+            text-align: center;
+        }
+
+        /* Redimensionar o drone (CRÍTICO) */
+        .drone-overlay {
+            display: none; /* Ocultar o drone completamente em telemóveis */
+            /* OU, se quiser mantê-lo: */
+            /* width: 100%;
+        right: 0;
+        top: 0;
+        position: relative; */
+        }
+
+        /* Redimensionar o título */
+        .banner .banner-caption h2 {
+            font-size: 30px;
+        }
+
+        /* Fazer os itens do formulário usar 100% da largura */
+        .submit-form .first-item,
+        .submit-form .second-item,
+        .submit-form .third-item {
+            border-right: none;
+            border-bottom: 1px solid #ddd; /* Adicionar separador vertical em vez de horizontal */
+        }
+    }
+
+    /* --- Ajustes para o Banner em Ecrãs Pequenos --- */
+    @media (max-width: 767px) {
+        /* Diminuir o preenchimento do banner */
+        .banner .banner-caption {
+            padding: 100px 20px 50px 20px;
+            text-align: center;
+        }
+
+        /* Redimensionar o drone (CRÍTICO) */
+        .drone-overlay {
+            display: none; /* Ocultar o drone completamente em telemóveis */
+            /* OU, se quiser mantê-lo: */
+            /* width: 100%;
+        right: 0;
+        top: 0;
+        position: relative; */
+        }
+
+        /* Redimensionar o título */
+        .banner .banner-caption h2 {
+            font-size: 30px;
+        }
+
+        /* Fazer os itens do formulário usar 100% da largura */
+        .submit-form .first-item,
+        .submit-form .second-item,
+        .submit-form .third-item {
+            border-right: none;
+            border-bottom: 1px solid #ddd; /* Adicionar separador vertical em vez de horizontal */
+        }
     }
 }
