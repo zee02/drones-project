@@ -1,5 +1,3 @@
-
-
 (function ($) {
     "use strict";
 
@@ -306,5 +304,26 @@
             1000
         );
         return false;
+    });
+
+    // Ativação do Owl Carousel para a secção de produtos em destaque
+    $(document).ready(function () {
+        $("#product-carousel").owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: true,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1, // 1 item em mobile
+                },
+                768: {
+                    items: 2, // 2 itens em tablet/desktop (dá o efeito "vertical")
+                },
+                1200: {
+                    items: 3, // Se tiver espaço para 3, use 3. Se quiser mais vertical, mantenha 2.
+                },
+            },
+        });
     });
 })(window.jQuery);

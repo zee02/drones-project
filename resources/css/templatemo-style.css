@@ -1,6 +1,6 @@
 body {
-    font-family: "Raleway", "sans-serif";
-    background-color: #fff;
+    font-family: var(--font-body); /* Aplicar fonte Body  */
+    background-color: var(--color-bg); /* Fundo principal Branco  */
 }
 
 /* --- 1. Estilos Base e Posicionamento --- */
@@ -92,13 +92,13 @@ section {
 
 .blue-button a {
     display: inline-block;
-    background-color: #4883ff;
+    background-color: #0072ce;
     color: #fff;
     font-size: 15px;
     font-weight: 500;
     padding: 10px 16px;
     text-decoration: none;
-    border: 2px solid #4883ff;
+    border: 2px solid #0072ce;
     transition: all 0.5s;
 }
 
@@ -177,7 +177,7 @@ section {
 }
 
 #header .logo img {
-    width: 50%;
+    width: 10%;
     overflow: hidden;
 }
 
@@ -1338,4 +1338,5 @@ footer .contact-info ul li a {
             border-bottom: 1px solid #ddd; /* Adicionar separador vertical em vez de horizontal */
         }
     }
+
 }

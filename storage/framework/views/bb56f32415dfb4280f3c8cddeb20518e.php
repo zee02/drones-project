@@ -30,21 +30,27 @@
                         <div class="col-md-6">
                             <ul>
                                 
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_faq')); ?></a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_register')); ?></a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_login')); ?></a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_profile')); ?></a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_how')); ?></a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_about')); ?></a></li>
+                                <li><a href="#"><i
+                                            class="fa fa-stop"></i><?php echo e(__('messages.footer.links_faq')); ?></a></li>
+                                <li><a href="#"><i
+                                            class="fa fa-stop"></i><?php echo e(__('messages.footer.links_about')); ?></a></li>
+                                <li><a href="#"><i
+                                            class="fa fa-stop"></i><?php echo e(__('messages.footer.links_partners')); ?></a></li>
+                                <li><a href="#"><i
+                                            class="fa fa-stop"></i><?php echo e(__('messages.footer.links_suporte')); ?></a></li>
                             </ul>
                         </div>
+
+
                         <div class="col-md-6">
                             <ul>
                                 
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_clients')); ?></a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_partners')); ?></a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_blog')); ?></a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i><?php echo e(__('messages.footer.links_contact')); ?></a></li>
+                                <li><a href="#"><i
+                                            class="fa fa-stop"></i><?php echo e(__('messages.footer.links_partners')); ?></a></li>
+                                <li><a href="#"><i
+                                            class="fa fa-stop"></i><?php echo e(__('messages.footer.links_suporte')); ?></a></li>
+                                <li><a href="#"><i
+                                            class="fa fa-stop"></i><?php echo e(__('messages.footer.links_politicas')); ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -56,13 +62,16 @@
                         
                         <h4><?php echo e(__('messages.footer.contact_title')); ?></h4>
                     </div>
-                     
+                    
                     <p><?php echo e(__('messages.footer.contact_lorem')); ?></p>
                     <ul>
                         
-                        <li><span><?php echo e(__('messages.footer.contact_phone')); ?></span><a href="#">010-050-0550</a></li>
-                        <li><span><?php echo e(__('messages.footer.contact_email')); ?></span><a href="#">hi@company.co</a></li>
-                        <li><span><?php echo e(__('messages.footer.contact_address')); ?></span><a href="#">company.co</a></li>
+                        <li><span><?php echo e(__('messages.footer.contact_phone')); ?></span><a href="#">010-050-0550</a>
+                        </li>
+                        <li><span><?php echo e(__('messages.footer.contact_email')); ?></span><a href="#">hi@company.co</a>
+                        </li>
+                        <li><span><?php echo e(__('messages.footer.contact_address')); ?></span><a href="#">company.co</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -73,5 +82,6 @@
 <div class="sub-footer">
     <p><?php echo e(__('messages.footer.copyright', ['year' => '2018', 'company' => 'Company Name'])); ?>
 
-    - <?php echo e(__('messages.footer.design_by')); ?> <a rel="nofollow" href="http://www.templatemo.com">Template Mo</a></p>
-</div><?php /**PATH B:\Projetos\website\drones-project\resources\views/layouts/footer.blade.php ENDPATH**/ ?>
+        - <?php echo e(__('messages.footer.design_by')); ?> <a rel="nofollow" href="http://www.templatemo.com">Template Mo</a></p>
+</div>
+<?php /**PATH B:\Projetos\website\drones-project\resources\views/layouts/footer.blade.php ENDPATH**/ ?>

@@ -3,8 +3,8 @@
 return [
     'banner' => [
         'drone_alt' => 'Drone em voo',
-        'subtitle' => 'A Tecnologia de Voo que redefine o impossível. Feito em Portugal.',
-        'discover_button' => 'Descobre mais',
+        'subtitle' => 'Filial Spider PT & África lusófona + integrador DJI',
+        'discover_button' => 'Ver soluções por setor',
     ],
     'form' => [
         'name_placeholder' => 'O seu nome...',
@@ -20,20 +20,52 @@ return [
         'search_button' => 'Procurar Agora',
     ],
     'popular' => [
-        'title' => 'Drones em destaque',
-        'subtitle' => 'A melhor qualidade, sempre...',
+        'title' => 'Produtos em Destaque',
         'listings' => 'listagens', // Ver nota abaixo sobre pluralização
     ],
     'services' => [
-        'title' => 'Os nossos serviços',
-        'subtitle' => 'Os melhores drones em Portugal!',
-        'item1_title' => 'Design de alta qualidade',
-        'item1_text' => 'Com os nossos materiais, os seus drones...',
-        'item2_title' => 'Totalmente Costumizáveis',
-        'item2_text' => 'Fale connosco e personalize o drone à sua maneira!',
-        'item3_title' => 'O melhor serviço',
-        'item3_text_lorem' => 'Praesent nec dui sed urna pharetra dapibus at ac elit. Aenean hendrerit metus leo, quis viverra purus condimentum nec.', // Texto de exemplo
-        'discover_button' => 'Descobrir Mais',
+        'title' => 'Escolhe o teu setor',
+        'item1_title' => 'Agricultura & Floresta',
+        'item2_title' => 'Energia & Utilities',
+        'item3_title' => 'Construção & Infraestruturas',
+        'item4_title' => 'Indústria & Facilities',
+        'item5_title' => 'Governo & Proteção Civil',
+    ],
+
+    'products' => [
+        'title' => 'Produtos em Destaque',
+        'subtitle' => 'Drones Profissionais',
+
+        // Novas chaves para diferenciação
+        'pro_title' => 'DJI Enterprise & Spider PT',
+        'pro_tag' => 'Profissional',
+
+        'consumer_title' => 'DJI Consumo / Comercial',
+        'criadores_entusiastas' => 'Para Criadores e Entusiastas',
+        // ...
+    ],
+
+    // ...
+    // Adicione este bloco ao seu array de retorno principal
+    'community' => [
+        'title'       => 'Comunidade SKYDRI',
+        'feature1'    => 'Encontros mensais de voo.',
+        'feature2'    => 'Apoio ao curso de piloto.',
+        'cta_button'  => 'Juntar-me à Comunidade',
+        'cta_button_alt' => 'Saber Mais',
+    ],
+    // ...
+
+    'products2' => [
+        'title' => 'Produtos em Destaque',
+        'subtitle' => 'Drones Comerciais',
+        // Novas chaves para diferenciação
+        'pro_title' => 'DJI Enterprise & Spider PT',
+        'pro_tag' => 'Profissional',
+
+        'consumer_title' => 'DJI Consumo / Comercial',
+        'criadores_entusiastas' => 'Para Criadores e Entusiastas',
+        // ...
     ],
     'video' => [
         'title' => 'Apresentação Vídeo',
@@ -66,32 +98,25 @@ return [
         'email' => 'Email:',
         'address' => 'Morada:',
     ],
-    
+
     'nav' => [
-        'menu' => 'Menu',
-        'about' => 'Sobre nós',
-        'example2' => 'Exemplo2', // (Traduz isto)
-        'gallery' => 'Galeria',
-        'example3' => 'Exemplo3', // (Traduz isto)
-        'contact' => 'Contacta-nos',
-        'translate' => '🌐 Traduzir',
-        'portuguese' => 'Português (PT)',
-        'english' => 'English (EN)',
+        'solucoes'      => 'Soluções',
+        'produtos'      => 'Produtos',
+        'servicos'      => 'Serviços',
+        'comunidade'    => 'Comunidade',
+        'suporte'       => 'Suporte',
+        'ondecomprar'   => 'Onde Comprar',
     ],
+
     'footer' => [
         'logo_alt' => 'Logo da Venue',
         'about_lorem' => 'Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellus, id efficitur leo. In hac habitasse platea dictumst.', // Substituir por texto real
-        
         'links_title' => 'Links Úteis',
         'links_faq' => 'Ajuda (FAQs)',
-        'links_register' => 'Registar',
-        'links_login' => 'Login',
-        'links_profile' => 'O Meu Perfil',
-        'links_how' => 'Como Funciona?',
-        'links_about' => 'Mais Sobre Nós',
-        'links_clients' => 'Os Nossos Clientes',
+        'links_about' => 'Sobre a SKYDRI',
+        'links_suporte' => 'Suporte Técnico',
         'links_partners' => 'Parcerias',
-        'links_blog' => 'Entradas de Blog',
+        'links_politicas' => 'Política de Privacidade',
         'links_contact' => 'Contacte-nos',
 
         'contact_title' => 'Informação de Contacto',
@@ -99,7 +124,7 @@ return [
         'contact_phone' => 'Telefone:',
         'contact_email' => 'Email:',
         'contact_address' => 'Morada:',
-        
+
         'copyright' => 'Copyright © :year :company.', // Vamos usar variáveis aqui
         'design_by' => 'Design:',
     ],
