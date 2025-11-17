@@ -7,7 +7,7 @@
                         <img src="<?php echo e(asset('img/drone_gif.gif')); ?>" alt="<?php echo e(__('messages.banner.drone_alt')); ?>"
                             class="drone-overlay">
                         <div class="line-dec"></div>
-                        <h2>SkyDry</h2>
+                        <h2>SkyDri</h2>
                         <span><?php echo e(__('messages.banner.subtitle')); ?></span>
                         <div class="blue-button">
                             <a class="scrollTo" data-scrollTo="popular"
@@ -25,13 +25,13 @@
                 <div class="col-md-12">
                     <div class="section-heading">
                         
-                        <span><?php echo e(__('messages.products.subtitle')); ?></span>
                         <h2><?php echo e(__('messages.products.title')); ?></h2>
                     </div>
                 </div>
             </div>
 
             
+            <h3 class="carousel-subtitle"><?php echo e(__('messages.products.subtitle')); ?></h3>
             <div class="owl-carousel owl-theme">
 
                 
@@ -81,19 +81,19 @@
 
 
 
-    <section class="popular-places" id="produtos">
+    <section class="popular-places" id="produtos2">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
                         
-                        <span><?php echo e(__('messages.products2.subtitle')); ?></span>
                         <h2><?php echo e(__('messages.products2.title')); ?></h2>
                     </div>
                 </div>
             </div>
 
             
+            <h3 class="carousel-subtitle"><?php echo e(__('messages.products.subtitle')); ?></h3>
             <div class="owl-carousel owl-theme">
 
                 
@@ -208,21 +208,30 @@
         </div>
     </section>
 
-    <section id="video-container">
-        <div class="video-overlay"></div>
-        <div class="video-content">
-            <div class="inner">
-                <span><?php echo e(__('messages.video.title')); ?></span>
-                <h2><?php echo e(__('messages.video.subtitle_lorem')); ?></h2> 
-                <a href="http://youtube.com" target="_blank"><i class="fa fa-play"></i></a>
+
+    <section class="community-section" id="community">
+        <div class="community-bg" style="background-image: url('<?php echo e(asset('img/comunidade.jpg')); ?>')"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="community-content">
+                        <h2>Junte-se à Nossa Comunidade</h2>
+                        <div class="community-features">
+                            <div class="feature-item">
+                                <h4>Encontros Mensais de Voo</h4>
+                                <p>Partilhe experiências com outros pilotos e entusiastas de drones.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Apoio ao Curso de Piloto</h4>
+                                <p>Suporte completo para certificação e desenvolvimento de competências.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-community">Juntar-me à Comunidade</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <video autoplay="" loop="" muted>
-            <source src="<?php echo e(asset('highway-loop.mp4')); ?>" type="video/mp4" />
-        </video>
     </section>
-
-
 
     <section class="contact" id="contact">
         <div id="map">

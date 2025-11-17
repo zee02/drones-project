@@ -66,12 +66,23 @@ p {
 }
 
 section {
-    padding-top: 80px;
+    padding-top: 70px;
+
+}
+#produtos2{
+    margin-top: -150px;
 }
 
 .section-heading {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 110px; /* increased spacing to give cards more breathing room */
+}
+
+/* Ensure section headings don't show any background */
+.section-heading {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0;
 }
 
 .section-heading span {
@@ -85,10 +96,32 @@ section {
 .section-heading h2 {
     margin-bottom: 0px;
     margin-top: 14px;
-    font-size: 23px;
+    font-size: 30px;
+    font-weight: bold;
     font-weight: 600;
-    color: #232323;
+    color: #001D35;
     letter-spacing: 0.5px;
+}
+
+
+/* Specific styles for the product sections */
+.popular-places .section-heading h2 {
+    font-size: 43px; /* enlarged for 'Produtos em destaque' */
+    margin-top: 0 px;
+    margin-bottom: -50px;
+    font-weight: 700;
+    line-height: 1.08;
+    color: #232323;
+}
+
+/* Center subtitles shown above each carousel */
+.carousel-subtitle {
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    color: #0072CE;
+    margin: 0 0 28px 0;
+    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .blue-button a {
@@ -360,20 +393,28 @@ section.banner {
     padding: 0px;
 }
 
-/* Estiliza o drone */
+/* Definição da Animação: Move 50px para a direita e volta */
+@keyframes patrulhar {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Aplicação da Animação ao elemento Drone */
 .drone-overlay {
-    /* Retira o elemento do fluxo normal e permite posicioná-lo. */
+    /* (Seus estilos de posição existentes...) */
     position: absolute;
-
-    /* Define a posição do drone (ajuste estes valores conforme o layout desejado) */
-    top: 170px; /* Distância do topo do banner-caption */
-    right: 5%; /* Distância da margem direita do banner-caption */
-
-    width: 500px; /* Define um tamanho adequado (exemplo: 200 pixels) */
-    height: auto;
-
-    /* Garante que o drone animado fica sempre por cima de qualquer outro elemento */
+    right: 5%; 
     z-index: 100;
+    
+    /* Aplica a animação */
+    animation: patrulhar 4s ease-in-out infinite; /* 6 segundos, suave, repetição infinita */
 }
 
 .banner {
@@ -496,6 +537,8 @@ section.banner {
     justify-content: center;
     margin: 0 auto;
     padding: 0 20px;
+    margin-top: 10px;
+    margin-bottom: 120px;
 }
 
 .popular-places .owl-dots {
@@ -526,16 +569,27 @@ section.banner {
 
 .popular-places .popular-item .thumb {
     position: relative;
-    border: 3px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    background-color: #f7f8fa; /* very light gray behind the image */
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* subtle shadow above and below for a lifted look */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     height: 350px;
+    padding-top: 12px; /* space to show the background behind the image */
+    padding-bottom: 12px;
+    margin-top: 35px;
+    margin-bottom: 30px;
 }
 
 .popular-places .popular-item .thumb:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* stronger shadow both above and below on hover */
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.12), 0 10px 24px rgba(0, 0, 0, 0.18);
     transform: translateY(-5px);
 }
 
@@ -710,11 +764,17 @@ section.featured-places {
     color: #4883ff;
 }
 
+.our-services{
+    background-color: #0072CE;
+}
+
 section.our-services .service-item {
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 1px solid #001D35;
+    border-radius: 8px;
     padding: 50px 30px;
+    background-color: white;
+    margin-bottom: 10px;
 }
 
 section.our-services .service-item .icon img {
@@ -724,7 +784,7 @@ section.our-services .service-item .icon img {
 section.our-services .service-item h4 {
     font-size: 19px;
     font-weight: 600;
-    color: #232323;
+    color: #001D35;
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -732,7 +792,7 @@ section.our-services .service-item h4 {
 .our-services .left-content h4 {
     font-size: 19px;
     font-weight: 600;
-    color: #232323;
+    color: white;
     margin-top: 0px;
     margin-bottom: 25px;
 }
@@ -742,7 +802,6 @@ section.our-services .service-item h4 {
 }
 
 .down-services {
-    border-top: 1px solid #ddd;
     margin-top: 60px;
     padding-top: 60px;
 }
@@ -1357,4 +1416,119 @@ footer .contact-info ul li a {
         }
     }
 
+}
+
+/* Community Section */
+.community-section {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin: 80px 0;
+}
+
+.community-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5;
+    filter: blur(3px) brightness(0.7);
+}
+
+.community-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.community-content h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #232323;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+.community-features {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    box-shadow: 0 8px 20px rgba(72, 131, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.feature-item h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4883ff;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.btn-community {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: #4883ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #4883ff;
+}
+
+.btn-community:hover {
+    background-color: #fff;
+    color: #4883ff;
+}
+
+@media (max-width: 768px) {
+    .community-content h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .community-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature-item {
+        min-width: auto;
+    }
+
+    .community-section {
+        padding: 50px 20px;
+    }
 }

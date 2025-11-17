@@ -9,7 +9,7 @@
                         <img src="{{ asset('img/drone_gif.gif') }}" alt="{{ __('messages.banner.drone_alt') }}"
                             class="drone-overlay">
                         <div class="line-dec"></div>
-                        <h2>SkyDry</h2>
+                        <h2>SkyDri</h2>
                         <span>{{ __('messages.banner.subtitle') }}</span>
                         <div class="blue-button">
                             <a class="scrollTo" data-scrollTo="popular"
@@ -26,14 +26,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        {{-- Usar títulos de Produtos em Destaque --}}
-                        <span>{{ __('messages.products.subtitle') }}</span>
+                        {{-- Cabeçalho principal para Produtos em destaque --}}
                         <h2>{{ __('messages.products.title') }}</h2>
                     </div>
                 </div>
             </div>
 
             {{-- INÍCIO DO CAROUSEL DE PRODUTOS --}}
+            <h3 class="carousel-subtitle">{{ __('messages.products.subtitle') }}</h3>
             <div class="owl-carousel owl-theme">
 
                 {{-- LINHA 1: DRONES PROFISSIONAIS (DJI Enterprise / Spider PT) --}}
@@ -83,19 +83,19 @@
 
 
 
-    <section class="popular-places" id="produtos">
+    <section class="popular-places" id="produtos2">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        {{-- Usar títulos de Produtos em Destaque --}}
-                        <span>{{ __('messages.products2.subtitle') }}</span>
+                        {{-- Cabeçalho principal para Produtos em destaque --}}
                         <h2>{{ __('messages.products2.title') }}</h2>
                     </div>
                 </div>
             </div>
 
             {{-- INÍCIO DO CAROUSEL DE PRODUTOS --}}
+            <h3 class="carousel-subtitle">{{ __('messages.products.subtitle') }}</h3>
             <div class="owl-carousel owl-theme">
 
                 {{-- LINHA 1: DRONES PROFISSIONAIS (DJI Enterprise / Spider PT) --}}
@@ -210,21 +210,30 @@
         </div>
     </section>
 
-    <section id="video-container">
-        <div class="video-overlay"></div>
-        <div class="video-content">
-            <div class="inner">
-                <span>{{ __('messages.video.title') }}</span>
-                <h2>{{ __('messages.video.subtitle_lorem') }}</h2> {{-- Texto Lorem Ipsum de Exemplo --}}
-                <a href="http://youtube.com" target="_blank"><i class="fa fa-play"></i></a>
+
+    <section class="community-section" id="community">
+        <div class="community-bg" style="background-image: url('{{ asset('img/comunidade.jpg') }}')"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="community-content">
+                        <h2>Junte-se à Nossa Comunidade</h2>
+                        <div class="community-features">
+                            <div class="feature-item">
+                                <h4>Encontros Mensais de Voo</h4>
+                                <p>Partilhe experiências com outros pilotos e entusiastas de drones.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Apoio ao Curso de Piloto</h4>
+                                <p>Suporte completo para certificação e desenvolvimento de competências.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-community">Juntar-me à Comunidade</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <video autoplay="" loop="" muted>
-            <source src="{{ asset('highway-loop.mp4') }}" type="video/mp4" />
-        </video>
     </section>
-
-
 
     <section class="contact" id="contact">
         <div id="map">

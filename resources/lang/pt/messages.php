@@ -3,8 +3,8 @@
 return [
     'banner' => [
         'drone_alt' => 'Drone em voo',
-        'subtitle' => 'Filial Spider PT & África lusófona + integrador DJI',
-        'discover_button' => 'Ver soluções por setor',
+        'subtitle' => 'Filial Spider PT & África lusófona + Integrador DJI',
+        'discover_button' => 'Ver Soluções por Setor',
     ],
     'form' => [
         'name_placeholder' => 'O seu nome...',
@@ -33,8 +33,8 @@ return [
     ],
 
     'products' => [
-        'title' => 'Produtos em Destaque',
-        'subtitle' => 'Drones Profissionais',
+        'title' => 'Drones Profissionais',
+        'subtitle' => 'Produtos em Destaque',
 
         // Novas chaves para diferenciação
         'pro_title' => 'DJI Enterprise & Spider PT',
@@ -57,8 +57,8 @@ return [
     // ...
 
     'products2' => [
-        'title' => 'Produtos em Destaque',
-        'subtitle' => 'Drones Comerciais',
+        'title' => 'Drones Comerciais',
+        'subtitle' => 'Produtos em Destaque',
         // Novas chaves para diferenciação
         'pro_title' => 'DJI Enterprise & Spider PT',
         'pro_tag' => 'Profissional',
