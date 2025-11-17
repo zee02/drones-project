@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
     <section class="banner" id="top">
         <div class="container">
