@@ -5,17 +5,13 @@
                 <div class="about-veno">
                     <div class="logo">
                         {{-- [TRADUZIDO] --}}
-                        <img src="{{ asset('img/footer_logo.png') }}" alt="{{ __('messages.footer.logo_alt') }}">
+                        <img id="logo-footer" src="{{ asset('img/logo.png') }}" alt="{{ __('messages.footer.logo_alt') }}">
                     </div>
-                    {{-- [TRADUZIDO] (Substituir este texto lorem ipsum nos lang files) --}}
-                    <p>{{ __('messages.footer.about_lorem') }}</p>
                     <ul class="social-icons">
                         <li>
                             <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +40,6 @@
 
                         <div class="col-md-6">
                             <ul>
-                                {{-- [TRADUZIDO] --}}
                                 <li><a href="#"><i
                                             class="fa fa-stop"></i>{{ __('messages.footer.links_partners') }}</a></li>
                                 <li><a href="#"><i
@@ -62,15 +57,11 @@
                         {{-- [TRADUZIDO] --}}
                         <h4>{{ __('messages.footer.contact_title') }}</h4>
                     </div>
-                    {{-- [TRADUZIDO] (Substituir este texto lorem ipsum nos lang files) --}}
-                    <p>{{ __('messages.footer.contact_lorem') }}</p>
                     <ul>
                         {{-- [TRADUZIDO] --}}
-                        <li><span>{{ __('messages.footer.contact_phone') }}</span><a href="#">010-050-0550</a>
+                        <li><span>{{ __('messages.footer.contact_phone') }}</span><a href="#">+351925444425</a>
                         </li>
-                        <li><span>{{ __('messages.footer.contact_email') }}</span><a href="#">hi@company.co</a>
-                        </li>
-                        <li><span>{{ __('messages.footer.contact_address') }}</span><a href="#">company.co</a>
+                        <li><span>{{ __('messages.footer.contact_email') }}</span><a href="#">comercial@vsferaone.com</a>
                         </li>
                     </ul>
                 </div>
@@ -80,6 +71,6 @@
 </footer>
 
 <div class="sub-footer">
-    <p>{{ __('messages.footer.copyright', ['year' => '2018', 'company' => 'Company Name']) }}
-        - {{ __('messages.footer.design_by') }} <a rel="nofollow" href="http://www.templatemo.com">Template Mo</a></p>
+    <p>{{ __('messages.footer.copyright', ['year' => '2025', 'company' => 'SkyDri']) }}
+        - {{ __('messages.footer.design_by') }} <a rel="nofollow" href="https://www.linkedin.com/in/jos%C3%A9-fernandes-224123219/">José Fernandes</a></p>
 </div>

@@ -28,6 +28,16 @@ img {
   max-width: 100%;
 }
 
+#logo-footer {
+  width: 150px !important;
+  margin-left: -20px;;
+}
+
+#contact{
+  margin-top: -100px !important;
+}
+
+
 /* -------------------------------- 
 
 Main Components 

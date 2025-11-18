@@ -1202,7 +1202,7 @@ footer .footer-heading h4 {
 }
 
 footer .about-veno .logo {
-    margin-bottom: 40px;
+    margin-bottom: -30px;
 }
 
 footer .about-veno ul li a {
@@ -1531,4 +1531,5 @@ footer .contact-info ul li a {
     .community-section {
         padding: 50px 20px;
     }
+
 }

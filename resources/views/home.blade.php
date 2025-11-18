@@ -217,18 +217,18 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="community-content">
-                        <h2>Junte-se à Nossa Comunidade</h2>
+                        <h2>{{ __('messages.community.title') }}</h2>
                         <div class="community-features">
                             <div class="feature-item">
-                                <h4>Encontros Mensais de Voo</h4>
-                                <p>Partilhe experiências com outros pilotos e entusiastas de drones.</p>
+                                <h4>{{ __('messages.community.feature1_title') }}</h4>
+                                <p>{{ __('messages.community.feature1_text') }}</p>
                             </div>
                             <div class="feature-item">
-                                <h4>Apoio ao Curso de Piloto</h4>
-                                <p>Suporte completo para certificação e desenvolvimento de competências.</p>
+                                <h4>{{ __('messages.community.feature2_title') }}</h4>
+                                <p>{{ __('messages.community.feature2_text') }}</p>
                             </div>
                         </div>
-                        <a href="#" class="btn-community">Juntar-me à Comunidade</a>
+                        <a href="#" class="btn-community">{{ __('messages.community.cta_button') }}</a>
                     </div>
                 </div>
             </div>
@@ -236,11 +236,6 @@
     </section>
 
     <section class="contact" id="contact">
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907"
-                width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
         <div class="container">
             <div class="col-md-10 col-md-offset-1">
                 <div class="wrapper">
@@ -249,71 +244,6 @@
                         <h2>{{ __('messages.contact.subtitle_lorem') }}</h2> {{-- Texto Lorem Ipsum de Exemplo --}}
                     </div>
                     <button id="modBtn" class="modal-btn">{{ __('messages.contact.talk_button') }}</button>
-                </div>
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <div class="close fa fa-close"></div>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="left-content">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="section-heading">
-                                                <span>{{ __('messages.modal.title') }}</span>
-                                                <h2>{{ __('messages.modal.subtitle') }}</h2>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <fieldset><input name="name" type="text" class="form-control"
-                                                    id="name"
-                                                    placeholder="{{ __('messages.form.name_placeholder') }}"
-                                                    required=""></fieldset>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <fieldset><input name="subject" type="text" class="form-control"
-                                                    id="subject"
-                                                    placeholder="{{ __('messages.modal.subject_placeholder') }}"
-                                                    required=""></fieldset>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <fieldset>
-                                                <textarea name="message" rows="6" class="form-control" id="message"
-                                                    placeholder="{{ __('messages.modal.message_placeholder') }}" required=""></textarea>
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <fieldset><button type="submit" id="form-submit"
-                                                    class="btn">{{ __('messages.modal.send_button') }}</button>
-                                            </fieldset>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="right-content">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="content">
-                                                <div class="section-heading">
-                                                    <span>{{ __('messages.modal.about_title') }}</span>
-                                                    <h2>{{ __('messages.modal.about_subtitle') }}</h2>
-                                                </div>
-                                                <p>{{ __('messages.modal.about_text_lorem') }}</p> {{-- Texto Lorem Ipsum de Exemplo --}}
-                                                <ul>
-                                                    <li><span>{{ __('messages.modal.phone') }}</span><a
-                                                            href="#">010-050-0550</a></li>
-                                                    <li><span>{{ __('messages.modal.email') }}</span><a
-                                                            href="#">hi@company.co</a></li>
-                                                    <li><span>{{ __('messages.modal.address') }}</span><a
-                                                            href="#">company.co</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
