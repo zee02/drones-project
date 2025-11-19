@@ -67,9 +67,8 @@ p {
 
 section {
     padding-top: 70px;
-
 }
-#produtos2{
+#produtos2 {
     margin-top: -150px;
 }
 
@@ -90,7 +89,8 @@ section {
     display: block;
     margin: 0px;
     color: #4883ff;
-    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
 }
 
 .section-heading h2 {
@@ -99,10 +99,9 @@ section {
     font-size: 30px;
     font-weight: bold;
     font-weight: 600;
-    color: #001D35;
+    color: #001d35;
     letter-spacing: 0.5px;
 }
-
 
 /* Specific styles for the product sections */
 .popular-places .section-heading h2 {
@@ -119,9 +118,10 @@ section {
     text-align: center;
     display: block;
     font-size: 18px;
-    color: #0072CE;
+    color: #0072ce;
     margin: 0 0 28px 0;
-    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
 }
 
 .blue-button a {
@@ -159,10 +159,14 @@ section {
 
 #header {
     z-index: 9999;
-    overflow: visible;
-    position: a;
+    /* CORRIGIDO: Deve ser 'fixed' e não 'a' */
+    position: fixed !important;
     top: 0;
+    width: 100%;
+    /* Adicionar sombra para que o header não seja comido pelo Hero Banner */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+    padding: 1rem 0; /* Define a altura do header com padding, não line-height */
 }
 
 #primary-nav-button {
@@ -210,7 +214,7 @@ section {
 
 #header .logo {
     /* float: none; REMOVER QUALQUER FLOAT ANTERIOR */
-    order: 1; 
+    order: 1;
 }
 
 #header .logo img {
@@ -220,10 +224,9 @@ section {
 }
 
 #header .container {
-
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu {
@@ -422,9 +425,9 @@ section.banner {
 .drone-overlay {
     /* (Seus estilos de posição existentes...) */
     position: absolute;
-    right: 5%; 
+    right: 5%;
     z-index: 100;
-    
+
     /* Aplica a animação */
     animation: patrulhar 4s ease-in-out infinite; /* 6 segundos, suave, repetição infinita */
 }
@@ -776,13 +779,13 @@ section.featured-places {
     color: #4883ff;
 }
 
-.our-services{
-    background-color: #0072CE;
+.our-services {
+    background-color: #0072ce;
 }
 
 section.our-services .service-item {
     text-align: center;
-    border: 1px solid #001D35;
+    border: 1px solid #001d35;
     border-radius: 8px;
     padding: 50px 30px;
     background-color: white;
@@ -796,7 +799,7 @@ section.our-services .service-item .icon img {
 section.our-services .service-item h4 {
     font-size: 19px;
     font-weight: 600;
-    color: #001D35;
+    color: #001d35;
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -1303,131 +1306,103 @@ footer .contact-info ul li a {
     color: #4883ff;
 }
 
+/* --- RESPONSIVIDADE (TABLET & MOBILE) --- */
 @media (max-width: 992px) {
+    
+    /* 1. Esconder o Menu Desktop */
+    #primary-nav {
+        /* O menu desktop deve ser escondido */
+        display: none; 
+    }
+    
+    /* 2. Mostrar o Botão Hamburger */
+    #primary-nav-button {
+        display: inline-block; /* O botão é agora visível */
+        position: relative; /* O posicionamento absoluto no header fixo era um erro */
+        
+        /* Ocupa a posição à direita, junto ao logo */
+        top: auto;
+        right: auto;
+        bottom: auto;
+        order: 2; /* Flexbox order */
+        
+        /* Estilização do botão para ser clicável */
+        background-color: var(--color-primary, #0072ce);
+        color: #fff;
+        font-size: 1rem;
+        width: 40px; /* Tamanho fixo */
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 4px;
+        z-index: 10;
+    }
+    
+    /* Ajuste para o conteúdo do botão (o ícone) */
+    #primary-nav-button:before {
+        content: "\2261";
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: transparent;
+        color: #fff;
+    }
+    
+    /* 3. Reativar o Menu Mobile (que está escondido por JS) */
+    #primary-nav.open,
+    #primary-nav.mobile { /* usa a classe 'mobile' para o layout vertical */
+        display: block !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+    
+    /* 4. Layout Vertical do Menu */
+    #primary-nav.mobile .menu,
+    #primary-nav.open .menu {
+        text-align: left; /* Alinhar o texto à esquerda */
+        flex-direction: column; /* Garantir que os items estão empilhados */
+    }
+
+    /* Fazer cada LI ocupar toda a largura */
+    #primary-nav.mobile li,
+    #primary-nav.open li {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #primary-nav.mobile li a,
+    #primary-nav.open li a {
+        padding: 15px 20px;
+        line-height: normal;
+    }
+}
+
+@media (max-width: 767px) {
     .banner .banner-caption {
-        padding: 200px 30px;
-    }
-
-    .submit-form input {
-        margin-bottom: 20px;
-        border-bottom: 1px solid #ddd;
-        border-radius: 0px;
-    }
-
-    .submit-form select {
-        margin-bottom: 20px;
-        border-bottom: 1px solid #ddd;
-        border-radius: 0px;
-    }
-
-    .featured-places .featured-item {
-        margin-bottom: 30px;
-    }
-
-    .featured-places .featured-item .down-content .first-button {
-        border-right: none;
-    }
-
-    section.our-services .service-item {
-        margin-bottom: 30px;
-    }
-
-    .down-services .left-content {
-        margin-bottom: 60px;
-    }
-
-    #video-container .video-content {
-        padding: 0 30px;
+        padding: 100px 20px 50px 20px;
         text-align: center;
     }
 
-    .table-item {
-        margin-bottom: 30px;
+    .drone-overlay {
+        display: none;
     }
 
-    .modal-content {
-        width: 90%;
-    }
-    .modal-content .close {
-        right: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        top: -30px;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    .banner .banner-caption h2 {
+        font-size: 30px;
     }
 
-    footer .useful-links {
-        margin-top: 60px;
+    .submit-form .first-item,
+    .submit-form .second-item,
+    .submit-form .third-item {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
     }
-
-    footer .contact-info {
-        margin-top: 60px;
-    }
-
-    /* --- Ajustes para o Banner em Ecrãs Pequenos --- */
-    @media (max-width: 767px) {
-        /* Diminuir o preenchimento do banner */
-        .banner .banner-caption {
-            padding: 100px 20px 50px 20px;
-            text-align: center;
-        }
-
-        /* Redimensionar o drone (CRÍTICO) */
-        .drone-overlay {
-            display: none; /* Ocultar o drone completamente em telemóveis */
-            /* OU, se quiser mantê-lo: */
-            /* width: 100%;
-        right: 0;
-        top: 0;
-        position: relative; */
-        }
-
-        /* Redimensionar o título */
-        .banner .banner-caption h2 {
-            font-size: 30px;
-        }
-
-        /* Fazer os itens do formulário usar 100% da largura */
-        .submit-form .first-item,
-        .submit-form .second-item,
-        .submit-form .third-item {
-            border-right: none;
-            border-bottom: 1px solid #ddd; /* Adicionar separador vertical em vez de horizontal */
-        }
-    }
-
-    /* --- Ajustes para o Banner em Ecrãs Pequenos --- */
-    @media (max-width: 767px) {
-        /* Diminuir o preenchimento do banner */
-        .banner .banner-caption {
-            padding: 100px 20px 50px 20px;
-            text-align: center;
-        }
-
-        /* Redimensionar o drone (CRÍTICO) */
-        .drone-overlay {
-            display: none; /* Ocultar o drone completamente em telemóveis */
-            /* OU, se quiser mantê-lo: */
-            /* width: 100%;
-        right: 0;
-        top: 0;
-        position: relative; */
-        }
-
-        /* Redimensionar o título */
-        .banner .banner-caption h2 {
-            font-size: 30px;
-        }
-
-        /* Fazer os itens do formulário usar 100% da largura */
-        .submit-form .first-item,
-        .submit-form .second-item,
-        .submit-form .third-item {
-            border-right: none;
-            border-bottom: 1px solid #ddd; /* Adicionar separador vertical em vez de horizontal */
-        }
-    }
-
 }
 
 /* Community Section */
@@ -1545,33 +1520,31 @@ footer .contact-info ul li a {
     }
 
     @media (max-width: 768px) {
-    
         /* CORREÇÃO: Forçar o Flexbox a afastar os filhos no mobile */
         #header .container {
             justify-content: space-between; /* Afasta o Logo do Botão */
             padding: 0 15px; /* Adiciona padding lateral para afastar das extremidades */
         }
-        
+
         /* CORREÇÃO: Esconder a navegação DESKTOP (incluindo links de idioma) no mobile */
         #primary-nav {
             display: none; /* Escondido por defeito, será mostrado pela classe .open via JS */
             /* ... regras de posição absoluta, max-height: 0, etc. ... */
         }
-        
+
         /* CORREÇÃO: Mostrar o botão mobile e posicioná-lo */
         #primary-nav-button {
-            display: block; 
+            display: block;
             order: 2; /* Move-o para a direita */
             /* Assegurar que o botão tem margem zero para se alinhar com o topo */
-            margin: 0; 
+            margin: 0;
         }
-        
+
         /* CORREÇÃO: Forçar o Logo para a esquerda */
         #header .header-logo-link {
-            order: 1; 
+            order: 1;
         }
-        
+
         /* ... restantes estilos de mobile ... */
     }
-
 }
