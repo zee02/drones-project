@@ -158,8 +158,10 @@ section {
 }
 
 #header {
+    z-index: 9999;
     overflow: visible;
-    position: relative;
+    position: a;
+    top: 0;
     background-color: #fff;
 }
 
@@ -207,12 +209,21 @@ section {
 }
 
 #header .logo {
-    float: left;
+    /* float: none; REMOVER QUALQUER FLOAT ANTERIOR */
+    order: 1; 
 }
 
 #header .logo img {
-    width: 10%;
-    overflow: hidden;
+    max-height: 120px; /* Impede que o logo seja demasiado alto */
+    width: auto;
+    display: block;
+}
+
+#header .container {
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .menu {
@@ -246,8 +257,9 @@ section {
     line-height: 100px;
     padding: 0px 15px;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     transition: all 0.5s;
+    font-family: "Poppins", system-ui, "Segoe UI", sans-serif;
 }
 
 #primary-nav li > a:hover,
@@ -1530,6 +1542,36 @@ footer .contact-info ul li a {
 
     .community-section {
         padding: 50px 20px;
+    }
+
+    @media (max-width: 768px) {
+    
+        /* CORREÇÃO: Forçar o Flexbox a afastar os filhos no mobile */
+        #header .container {
+            justify-content: space-between; /* Afasta o Logo do Botão */
+            padding: 0 15px; /* Adiciona padding lateral para afastar das extremidades */
+        }
+        
+        /* CORREÇÃO: Esconder a navegação DESKTOP (incluindo links de idioma) no mobile */
+        #primary-nav {
+            display: none; /* Escondido por defeito, será mostrado pela classe .open via JS */
+            /* ... regras de posição absoluta, max-height: 0, etc. ... */
+        }
+        
+        /* CORREÇÃO: Mostrar o botão mobile e posicioná-lo */
+        #primary-nav-button {
+            display: block; 
+            order: 2; /* Move-o para a direita */
+            /* Assegurar que o botão tem margem zero para se alinhar com o topo */
+            margin: 0; 
+        }
+        
+        /* CORREÇÃO: Forçar o Logo para a esquerda */
+        #header .header-logo-link {
+            order: 1; 
+        }
+        
+        /* ... restantes estilos de mobile ... */
     }
 
 }

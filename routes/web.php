@@ -14,11 +14,14 @@ Route::get('/', function () {
 })->name('root'); // Nomeie a rota raiz para referência.
 
 // 2. ROTAS LOCALIZADAS (Onde o seu SetLocale Middleware atua)
+
 Route::prefix('{locale}')
+
     ->whereIn('locale', ['en', 'pt']) 
     // Aplicamos o middleware aqui, se não estiver já no grupo 'web' do Kernel
     ->middleware(\App\Http\Middleware\SetLocale::class) 
     ->group(function () {
         
         Route::view('/', 'home')->name('home'); 
-    });
+        Route::view('/solucoes', 'sub-pages.solucoes.solucoes')->name('solucoes');
+        });

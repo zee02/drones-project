@@ -4,8 +4,10 @@
             <div class="col-md-5">
                 <div class="about-veno">
                     <div class="logo">
-                        {{-- [TRADUZIDO] --}}
-                        <img id="logo-footer" src="{{ asset('img/logo.png') }}" alt="{{ __('messages.footer.logo_alt') }}">
+                        <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="footer-logo-link">
+                            {{-- [TRADUZIDO] --}}
+                            <img id="logo-footer" src="{{ asset('img/logo.png') }}" alt="{{ __('messages.footer.logo_alt') }}">
+                        </a>
                     </div>
                     <ul class="social-icons">
                         <li>
@@ -31,8 +33,6 @@
                                 <li><a href="#"><i
                                             class="fa fa-stop"></i>{{ __('messages.footer.links_about') }}</a></li>
                                 <li><a href="#"><i
-                                            class="fa fa-stop"></i>{{ __('messages.footer.links_partners') }}</a></li>
-                                <li><a href="#"><i
                                             class="fa fa-stop"></i>{{ __('messages.footer.links_suporte') }}</a></li>
                             </ul>
                         </div>
@@ -42,8 +42,6 @@
                             <ul>
                                 <li><a href="#"><i
                                             class="fa fa-stop"></i>{{ __('messages.footer.links_partners') }}</a></li>
-                                <li><a href="#"><i
-                                            class="fa fa-stop"></i>{{ __('messages.footer.links_suporte') }}</a></li>
                                 <li><a href="#"><i
                                             class="fa fa-stop"></i>{{ __('messages.footer.links_politicas') }}</a></li>
                             </ul>

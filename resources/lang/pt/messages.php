@@ -7,6 +7,11 @@ return [
         'discover_button' => 'Ver Soluções por Setor',
     ],
 
+    // CHAVE NOVA (Adicionada para o Título principal da página de Soluções)
+    'hero' => [
+        'solucoes_header' => 'Diversas soluções à sua medida',
+    ],
+
     'products' => [
         'title' => 'Drones Profissionais',
         'subtitle' => 'Produtos em Destaque',
@@ -14,6 +19,7 @@ return [
         'pro_tag' => 'Profissional',
         'consumer_title' => 'DJI Consumo / Comercial',
         'criadores_entusiastas' => 'Para Criadores e Entusiastas',
+        'detalhes_btn' => 'Detalhes',
     ],
 
     'products2' => [
@@ -31,6 +37,23 @@ return [
         'item3_title' => 'Construção & Infraestruturas',
         'item4_title' => 'Indústria & Facilities',
         'item5_title' => 'Governo & Proteção Civil',
+        'item6_title' => 'Projetos à Medida', // Novo item 6
+        'item1_desc' => 'Mapeamento de saúde vegetal e gestão de irrigação para otimização de colheitas.',
+        'item2_desc' => 'Inspeção de infraestruturas críticas (eólicas, solares, linhas de transmissão) com termografia.',
+        'item3_desc' => 'Levantamento topográfico, inspeção de pontes e monitorização de progresso de obras.',
+        'item4_desc' => 'Controlo de inventário, inspeção de telhados industriais e monitorização de segurança.',
+        'item5_desc' => 'Apoio a operações de busca e resgate, resposta a desastres e segurança pública.',
+        'item6_desc' => 'Desenvolvimento de software e hardware de drone customizado para requisitos únicos.',
+    ],
+    
+    // CHAVES RESTRUTURADAS (Para permitir a iteração no Blade)
+    'about_us' => [
+        'how_we_work_title' => 'Como Trabalhamos',
+        // 'how_we_work_steps' foi removida
+        'step1' => 'Diagnóstico', 
+        'step2' => 'Prova de conceito', 
+        'step3' => 'Implementação', 
+        'step4' => 'Suporte',
     ],
 
     'community' => [
@@ -46,18 +69,20 @@ return [
         'title' => 'Contacte-nos',
         'subtitle_lorem' => 'Saber mais',
         'talk_button' => 'Fale connosco',
+        // CHAVE NOVA
+        'specialist_button' => 'Falar com um especialista',
     ],
 
     'nav' => [
-        'menu'          => 'Menu',
-        'english'       => 'Inglês (EN)',
-        'portuguese'    => 'Português (PT)',
-        'solucoes'      => 'Soluções',
-        'produtos'      => 'Produtos',
-        'servicos'      => 'Serviços',
-        'comunidade'    => 'Comunidade',
-        'suporte'       => 'Suporte',
-        'ondecomprar'   => 'Onde Comprar',
+        'menu' => 'Menu',
+        'english' => 'Inglês (EN)',
+        'portuguese' => 'Português (PT)',
+        'solucoes' => 'Soluções',
+        'produtos' => 'Produtos',
+        'servicos' => 'Serviços',
+        'comunidade' => 'Comunidade',
+        'suporte' => 'Suporte',
+        'ondecomprar' => 'Onde Comprar',
     ],
 
     'footer' => [

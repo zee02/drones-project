@@ -1,0 +1,346 @@
+/* Definição de Variáveis CSS (Apenas para referência - devem estar noutro ficheiro) */
+:root {
+    --color-primary: #0072ce; 
+    --color-primary-light: #5db0ff; 
+    --color-bg: #ffffff; 
+    --color-bg-soft: #f8f9fa; 
+    --color-border-soft: #e9ecef; 
+    --color-text-main: #212529; 
+    --color-text-muted: #adb5bd; 
+    --font-heading: 'Poppins', sans-serif;
+    --space-section-y: 72px;
+    --radius-card: 12px;
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ----------------------------------------------------------- */
+/* 1. ESTILOS DA SECÇÃO HERO (SOLUÇÕES) */
+/* ----------------------------------------------------------- */
+
+.hero--solucoes {
+    z-index: 1;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    /* Usa a variável --hero-bg-image definida no Blade, com overlay */
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.6)
+    ),
+    var(--hero-bg-image);
+    background-size: cover;
+    background-position: center 10%;
+    padding: 2rem 1.5rem;
+    margin-bottom: 0 !important; /* Garantir que o hero não empurra a secção seguinte */
+}
+
+.hero--solucoes .hero__content {
+    max-width: 720px;
+}
+
+.hero--solucoes .hero__eyebrow {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero--solucoes .hero__title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero--solucoes .hero__copy {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: #fff;
+}
+
+.hero--solucoes .hero__cta {
+    display: inline-block;
+    padding: 0.95rem 2.5rem;
+    background: var(--color-primary, #0072ce);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 4px; 
+}
+
+.hero--solucoes .hero__cta:hover,
+.hero--solucoes .hero__cta:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ----------------------------------------------------------- */
+/* 2. ESTILOS DA GRELHA DE SOLUÇÕES (CARDS) */
+/* ----------------------------------------------------------- */
+
+.solucoes-grid-section {
+    padding-top: var(--space-section-y, 72px); /* Mantém o padding padrão da secção */
+    padding-bottom: var(--space-section-y, 72px);
+    background-color: var(--color-bg-soft);
+}
+
+/* SOLUÇÃO DE ESPAÇAMENTO: Aplica 90px de margem superior ao título principal */
+.solucoes-grid-section h2#solucoes-titulo2 {
+    margin-top: 120px; 
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.solucoes-grid-section h2#solucoes-titulo {
+
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- Estilos do Cartão --- */
+
+.setor-card-wrapper {
+    margin-bottom: 30px;
+}
+
+.setor-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 24px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-card);
+    height: 350px; 
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease-out; 
+}
+
+/* EFEITO HOVER PRINCIPAL (Flutuação e Sombra) */
+.setor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* 2.1. Imagem de Fundo Dinâmica */
+.card-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    
+    /* VALORES OTIMIZADOS: Opacidade base baixa, transição de zoom longa */
+    opacity: 0.8; 
+    transform: scale(1);
+    transition: opacity 0.5s ease, transform 4s ease-out; 
+    z-index: -1;
+}
+
+.setor-card:hover .card-bg-image {
+    /* Efeito de zoom mais rápido e opacidade aumentada */
+    opacity: 0.4;
+    transform: scale(1.05);
+    transition: opacity 0.5s ease, transform 1.5s ease-out; 
+}
+
+/* 2.2. Overlay (Escurecimento) */
+.card-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.setor-card:hover .card-bg-overlay {
+    opacity: 0.75;
+}
+
+/* 2.3. Estilização do Conteúdo (Texto e Ícones) */
+
+.card-content-wrap {
+    position: relative;
+    z-index: 2;
+    padding-top: 15px;
+    height: 100%;
+    text-align: left;
+    color: #fff; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card-icon {
+    font-size: 38px;
+    color: #fff;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+}
+
+.setor-card:hover .card-icon {
+    color: var(--color-primary-light); 
+}
+
+.card-title-heading {
+    font-size: 24px; 
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.setor-card:hover .card-title-heading {
+    color: #fff; /* Mantido branco para consistência com o contraste */
+}
+
+.card-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 10px;
+    flex-grow: 1; 
+}
+
+.card-cta-link {
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: margin-left 0.3s ease, color 0.3s ease;
+}
+
+.setor-card:hover .card-cta-link {
+    margin-left: 5px; 
+    color: var(--color-primary-light); 
+}
+
+/* ----------------------------------------------------------- */
+/* 3. BLOCO 'COMO TRABALHAMOS' (TIMELINE) */
+/* ----------------------------------------------------------- */
+
+.border-top-soft {
+    border-top: 1px solid var(--color-border-soft);
+}
+
+.how-we-work-timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Linha horizontal */
+.how-we-work-timeline:before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 5%;
+    width: 90%;
+    height: 3px;
+    background-color: #0072CE;
+    z-index: 0;
+}
+
+.timeline-step {
+    flex-basis: 22%;
+    text-align: center;
+    position: relative;
+    padding-top: 40px;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    border: 5px solid var(--color-bg-soft); 
+}
+
+.step-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-top: 15px;
+}
+
+/* --- Responsividade da Timeline (Mobile) --- */
+@media (max-width: 768px) {
+    .how-we-work-timeline {
+        flex-direction: column;
+        align-items: flex-start; /* Alinhar à esquerda */
+        padding: 0 20px;
+        position: relative;
+    }
+
+    .how-we-work-timeline:before {
+        /* Linha vertical em mobile */
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 25px; 
+        width: 3px;
+        height: 100%;
+        background-color: var(--color-border-soft);
+        z-index: 0;
+    }
+
+    .timeline-step {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+        padding-top: 0;
+        text-align: left;
+        position: relative;
+    }
+
+    .step-number {
+        position: absolute; 
+        left: 0;
+        top: 0;
+        transform: none;
+        margin: 0;
+        z-index: 2; 
+        border: 5px solid var(--color-bg); 
+    }
+
+    .step-title {
+        /* Afastar do step-number */
+        margin-left: 65px; 
+        margin-top: 5px;
+        text-align: left;
+    }
+
+
+}

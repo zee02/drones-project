@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>SkyDry</title>
+    <title>SkyDri</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="<?php echo e(asset('img/logo.png')); ?>" type="image/x-icon">
 
     
-    <link rel="apple-touch-icon" href="<?php echo e(asset('img/icon.png')); ?>">
+    <link rel="apple-touch-icon" href="<?php echo e(asset('img/logo.png')); ?>">
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 

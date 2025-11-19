@@ -14,3 +14,4 @@ import './plugins.js';
 
 // 4. MAIN (Inicialização/Chamada da lógica principal)
 import './main.js'; 
+import './solucoes.js';
