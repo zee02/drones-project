@@ -24,11 +24,11 @@
     "src": "public/fonts/fontawesome-webfont.woff2"
   },
   "public/img/main_banner.jpg": {
-    "file": "assets/main_banner-RqaxoyEQ.jpg",
+    "file": "assets/main_banner-CH586jFd.jpg",
     "src": "public/img/main_banner.jpg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DoNd1cEw.css",
+    "file": "assets/app-CcKLAQk9.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -37,7 +37,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-Bn-Pczek.js",
+    "file": "assets/app-aU-3MGJB.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
