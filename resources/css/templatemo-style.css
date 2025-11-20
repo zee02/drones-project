@@ -1308,24 +1308,51 @@ footer .contact-info ul li a {
 
 /* --- RESPONSIVIDADE (TABLET & MOBILE) --- */
 @media (max-width: 992px) {
-    
     /* 1. Esconder o Menu Desktop */
     #primary-nav {
         /* O menu desktop deve ser escondido */
-        display: none; 
+
+        position: absolute; /* Para que ele apareça por baixo do header fixo */
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        /* Usa max-height e overflow para esconder com transição */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out; /* Adicionar transição */
+
+        background-color: var(--color-bg, #fff); /* Adicionar cor de fundo */
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
     }
-    
+
+    #header .container {
+        /* Garante que o container ocupa toda a largura */
+        width: 100%;
+
+        /* Adiciona algum padding lateral para o logo e o botão não colarem nas bordas */
+        padding: 0 15px;
+
+        /* CRÍTICO: Alinha os itens para o início (esquerda) */
+        justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+
+        /* CRÍTICO: Alinha os itens verticalmente ao centro */
+        align-items: center; /* Alinha verticalmente ao centro, se o logo e o botão tiverem alturas diferentes */
+    }
+
     /* 2. Mostrar o Botão Hamburger */
     #primary-nav-button {
-        display: inline-block; /* O botão é agora visível */
+        display: block; /* O botão é agora visível */
         position: relative; /* O posicionamento absoluto no header fixo era um erro */
-        
+
         /* Ocupa a posição à direita, junto ao logo */
         top: auto;
         right: auto;
         bottom: auto;
         order: 2; /* Flexbox order */
-        
+        margin-left: auto; /* CRÍTICO: Empurra o botão o máximo possível para a direita */
+
         /* Estilização do botão para ser clicável */
         background-color: var(--color-primary, #0072ce);
         color: #fff;
@@ -1337,7 +1364,12 @@ footer .contact-info ul li a {
         border-radius: 4px;
         z-index: 10;
     }
-    
+    #header .logo {
+        /* Garante que o logo é o primeiro item na ordem flex */
+        order: 1;
+        margin-right: 20px; /* Opcional: Adiciona um pequeno espaço entre o logo e o botão */
+    }
+
     /* Ajuste para o conteúdo do botão (o ícone) */
     #primary-nav-button:before {
         content: "\2261";
@@ -1345,14 +1377,18 @@ footer .contact-info ul li a {
         width: 40px;
         height: 40px;
         line-height: 40px;
-        background-color: transparent;
+        background-color: #4883ff;
         color: #fff;
     }
-    
+
+    #primary-nav.open {
+        max-height: 500px; /* Suficiente para mostrar todo o conteúdo do menu */
+        overflow: visible;
+    }
+
     /* 3. Reativar o Menu Mobile (que está escondido por JS) */
     #primary-nav.open,
-    #primary-nav.mobile { /* usa a classe 'mobile' para o layout vertical */
-        display: block !important;
+    #primary-nav.mobile {
         position: absolute;
         top: 100%;
         left: 0;
@@ -1360,7 +1396,7 @@ footer .contact-info ul li a {
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
         z-index: 999;
     }
-    
+
     /* 4. Layout Vertical do Menu */
     #primary-nav.mobile .menu,
     #primary-nav.open .menu {
@@ -1522,10 +1558,16 @@ footer .contact-info ul li a {
     @media (max-width: 768px) {
         /* CORREÇÃO: Forçar o Flexbox a afastar os filhos no mobile */
         #header .container {
+            float: left;
             justify-content: space-between; /* Afasta o Logo do Botão */
             padding: 0 15px; /* Adiciona padding lateral para afastar das extremidades */
         }
 
+        #header .logo {
+            /* Garante que o logo é o primeiro item na ordem flex */
+            order: 1;
+            margin-right: 250px; /* Opcional: Adiciona um pequeno espaço entre o logo e o botão */
+        }
         /* CORREÇÃO: Esconder a navegação DESKTOP (incluindo links de idioma) no mobile */
         #primary-nav {
             display: none; /* Escondido por defeito, será mostrado pela classe .open via JS */
@@ -1546,5 +1588,70 @@ footer .contact-info ul li a {
         }
 
         /* ... restantes estilos de mobile ... */
+
+        /* --- AJUSTES PARA TABLETS EM MODO PORTRAIT E TELEMÓVEIS GRANDES (Max 768px) --- */
+        @media (max-width: 768px) {
+            /* Seções (Reduzir padding para telas menores) */
+            section {
+                padding-top: 50px;
+            }
+
+            /* Títulos (Reduzir tamanho para caber no ecrã) */
+            .section-heading h2,
+            .community-content h2 {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            /* Layout de Features/Comunidade (Empilhamento) */
+            .community-features {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            /* Outras secções empilhadas (ex: .popular-places) */
+            .popular-places .owl-carousel {
+                /* Se o carrossel Owl estiver a usar 2 ou 3 itens, forçar 1 item */
+            }
+
+            /* Footer (Espaçamento entre colunas) */
+            footer .useful-links,
+            footer .contact-info {
+                margin-top: 40px;
+            }
+        }
+
+        /* --- AJUSTES PARA TELEMÓVEIS (Mobile Extremo - Max 480px) --- */
+        @media (max-width: 480px) {
+            /* Botão Hamburger (Garantir que o ícone cabe) */
+            #primary-nav-button {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
+            #primary-nav-button:before {
+                font-size: 20px;
+                line-height: 35px;
+            }
+
+            /* Hero Banner (Reduzir a altura) */
+            .banner .banner-caption {
+                padding: 80px 15px 40px 15px;
+            }
+
+            /* Títulos (Reduzir o tamanho do Hero) */
+            .banner .banner-caption h2 {
+                font-size: 26px;
+            }
+
+            /* Formulários e Itens (Empilhar totalmente se houver mais que um item por linha) */
+            .submit-form .first-item,
+            .submit-form .second-item,
+            .submit-form .third-item {
+                /* Já tem border-bottom: 1px solid #ddd; no seu CSS, o que é bom para empilhar */
+                margin-bottom: 15px;
+                width: 100% !important; /* Assegura 100% de largura */
+            }
+        }
     }
 }

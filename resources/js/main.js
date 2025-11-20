@@ -326,4 +326,20 @@
             },
         });
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const navButton = document.getElementById("primary-nav-button");
+        const primaryNav = document.getElementById("primary-nav");
+
+        // Verifica se os elementos existem
+        if (navButton && primaryNav) {
+            navButton.addEventListener("click", function () {
+                // CRÍTICO: Alterna a classe '.open' no menu para fazê-lo aparecer/deslizar
+                primaryNav.classList.toggle("open");
+
+                // Opcional: Adiciona classe de estado ao botão (se tiver CSS para mudar o ícone)
+                navButton.classList.toggle("selected");
+            });
+        }
+    });
 })(window.jQuery);
