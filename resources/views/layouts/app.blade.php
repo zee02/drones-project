@@ -17,6 +17,7 @@
     <link rel="apple-touch-icon" href="{{ asset('img/logo.png') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     {{-- MODERNIZR (ASSET ESTÁTICO) --}}
     <script src="{{ asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
@@ -36,6 +37,10 @@
 
     {{-- FOOTER INCLUÍDO --}}
     @include('layouts.footer')
+
+    @stack('styles')
+
+    @stack('scripts')
 </body>
 
 </html>

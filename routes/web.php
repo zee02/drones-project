@@ -24,4 +24,6 @@ Route::prefix('{locale}')
         
         Route::view('/', 'home')->name('home'); 
         Route::view('/solucoes', 'sub-pages.solucoes.solucoes')->name('solucoes');
+        Route::view('/servicos', 'sub-pages.servicos')->name('servicos');
+
         });

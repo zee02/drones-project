@@ -1,0 +1,133 @@
+/* Variáveis e Reset */
+:root {
+    --color-primary: #0072CE;
+    --color-secondary: #001D35;
+    --color-light: #F4F7FA;
+    --color-white: #ffffff;
+    --color-text-main: #333;
+    --font-stack: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--color-text-main);
+    background-color: var(--color-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('../../img/servicos/banner.jpg') no-repeat center 45%/cover;
+    color: var(--color-white);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.p-servicos{
+    color: white !important;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+.hero h1 strong {
+    color: #00e0ff;
+}
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 15px;
+}
+
+/* --- PILARES SECTION (CARDS) --- */
+.pillars-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+.pillars-section h2 {
+    font-size: 2.2rem; margin-bottom: 50px; color: var(--color-secondary);
+}
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; max-width: 1200px; margin: 0 auto;
+}
+.pillar-card {
+    background-color: var(--color-white);
+    border-radius: 10px; overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: left; transition: transform 0.3s;
+}
+.pillar-card:hover {
+    transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.card-image-wrapper { height: 200px; overflow: hidden; }
+.card-image-wrapper img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(40%); transition: transform 0.5s, filter 0.5s; }
+.pillar-card:hover img { transform: scale(1.05); filter: grayscale(0%); }
+.card-content { padding: 30px 25px; }
+.card-content h3 { color: var(--color-secondary); font-size: 1.5rem; margin-top: 15px; margin-bottom: 10px; }
+.card-content .icon-primary { font-size: 2.2rem; color: var(--color-primary); }
+.card-content .service-list { list-style: none; padding: 0; margin-top: 20px; }
+.card-content .service-list i { color: var(--color-primary); margin-right: 10px; }
+.card-content .service-list li { margin-bottom: 8px; font-size: 0.95em; color: var(--color-text-main); }
+
+
+/* --- CTA FINAL SECTION --- */
+.cta-section {
+    padding: 80px 20px; background-color: var(--color-secondary);
+    color: var(--color-white); text-align: center; margin-top: 60px;
+}
+.cta-content h2 { font-size: 2rem; margin-bottom: 15px; }
+.secondary-button {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+.secondary-button:hover {
+    background-color: var(--color-light);
+    color: var(--color-secondary);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .hero { height: 50vh; }
+    .hero h1 { font-size: 2rem; }
+    .pillars-section, .cta-section { padding: 50px 20px; }
+}

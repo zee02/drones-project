@@ -45,14 +45,14 @@ return [
         'item5_desc' => 'Apoio a operações de busca e resgate, resposta a desastres e segurança pública.',
         'item6_desc' => 'Desenvolvimento de software e hardware de drone customizado para requisitos únicos.',
     ],
-    
+
     // CHAVES RESTRUTURADAS (Para permitir a iteração no Blade)
     'about_us' => [
         'how_we_work_title' => 'Como Trabalhamos',
         // 'how_we_work_steps' foi removida
-        'step1' => 'Diagnóstico', 
-        'step2' => 'Prova de conceito', 
-        'step3' => 'Implementação', 
+        'step1' => 'Diagnóstico',
+        'step2' => 'Prova de conceito',
+        'step3' => 'Implementação',
         'step4' => 'Suporte',
     ],
 
@@ -99,5 +99,36 @@ return [
         'contact_email' => 'Email:',
         'copyright' => 'Copyright © :year :company.',
         'design_by' => 'Feito por: ',
+    ],
+
+    'servicos_page' => [
+        // HERO
+        'hero_title_p1' => 'Na SKYDRI, vendemos',
+        'hero_title_p2' => 'soluções e serviços',
+        'hero_title_p3' => 'não apenas equipamentos.',
+        'hero_cta' => 'As Nossas Soluções',
+
+        // PILARES
+        'pillars_title' => 'Os Nossos Pilares de Excelência',
+
+        // PILAR 1: Consultoria & Projeto
+        'pilar1_title' => 'Consultoria & Projeto',
+        'pilar1_item1' => 'Desenho de Solução',
+        'pilar1_item2' => 'Prova de Conceito',
+
+        // PILAR 2: Formação & Certificação
+        'pilar2_title' => 'Formação & Certificação',
+        'pilar2_item1' => 'Curso Oficial de Piloto',
+        'pilar2_item2' => 'Treino em Operação Segura',
+
+        // PILAR 3: Manutenção & Suporte
+        'pilar3_title' => 'Manutenção & Suporte',
+        'pilar3_item1' => 'Contratos SLA',
+        'pilar3_item2' => 'Integração de Sistemas',
+
+        // CTA FINAL
+        'cta_title' => 'Pronto para ir além do equipamento?',
+        'cta_subtitle' => 'Fale com a nossa equipa de consultores e desenhe o seu próximo projeto.',
+        'cta_button' => 'Falar com um Especialista Agora',
     ],
 ];

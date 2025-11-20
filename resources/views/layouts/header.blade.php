@@ -1,7 +1,7 @@
 <header id="header">
     {{-- O CONTAINER é o PAI FLEXBOX --}}
     <div class="container">
-        
+
         {{-- Botão Hamburger (Escondido em Desktop) --}}
         <button id="primary-nav-button" type="button">{{ __('messages.nav.menu') }}</button>
 
@@ -25,9 +25,17 @@
         {{-- 2. Navegação Principal (Filho direto do container - Empurrado para a direita) --}}
         <nav id="primary-nav" class="dropdown cf">
             <ul class="dropdown menu">
-                <li><a href="{{ route("solucoes", array_merge($params, ['locale' => $currentLocale])) }}">{{ __('messages.nav.solucoes') }}</a></li>
+                <li>
+                    <a href="{{ route('solucoes', array_merge($params, ['locale' => $currentLocale])) }}">
+                        {{ __('messages.nav.solucoes') }}
+                    </a>
+                </li>
                 <li><a href="#">{{ __('messages.nav.produtos') }}</a></li>
-                <li><a href="#">{{ __('messages.nav.servicos') }}</a></li>
+                <li>
+                    <a href="{{ route('servicos', array_merge($params, ['locale' => $currentLocale])) }}">
+                        {{ __('messages.nav.servicos') }}
+                    </a>
+                </li>
                 <li><a href="#">{{ __('messages.nav.comunidade') }}</a></li>
                 <li><a href="#">{{ __('messages.nav.suporte') }}</a></li>
                 <li><a href="#">{{ __('messages.nav.ondecomprar') }}</a></li>
@@ -42,6 +50,6 @@
                 </li>
             </ul>
         </nav>
-        
+
     </div>
 </header>

@@ -6,7 +6,7 @@ return [
         'subtitle' => 'Spider PT & Lusophone Africa Branch + DJI Integrator',
         'discover_button' => 'View Solutions by Sector',
     ],
-    
+
     // CHAVE NOVA (Corresponde a 'Diversas soluções à sua medida')
     'hero' => [
         'solucoes_header' => 'Diverse Solutions Tailored to You',
@@ -45,14 +45,14 @@ return [
         'item5_desc' => 'Support for search and rescue operations, disaster response, and public safety.',
         'item6_desc' => 'Development of customized drone software and hardware for unique requirements.',
     ],
-    
+
     // CHAVES REESTRUTURADAS (Para os passos da timeline)
     'about_us' => [
         'how_we_work_title' => 'How We Work',
         // 'how_we_work_steps' foi removida
-        'step1' => 'Diagnosis', 
-        'step2' => 'Proof of Concept', 
-        'step3' => 'Implementation', 
+        'step1' => 'Diagnosis',
+        'step2' => 'Proof of Concept',
+        'step3' => 'Implementation',
         'step4' => 'Support',
     ],
 
@@ -99,5 +99,36 @@ return [
         'contact_email' => 'Email:',
         'copyright' => 'Copyright © :year :company.',
         'design_by' => 'Designed by: ',
+    ],
+
+    'servicos_page' => [
+        // HERO
+        'hero_title_p1' => 'At SKYDRI, we sell',
+        'hero_title_p2' => 'solutions and services',
+        'hero_title_p3' => ', not just equipment.', // Adicionei a vírgula para fluidez no inglês
+        'hero_cta' => 'Our Solutions',
+
+        // PILARES
+        'pillars_title' => 'Our Pillars of Excellence',
+
+        // PILAR 1: Consultoria & Projeto
+        'pilar1_title' => 'Consulting & Project',
+        'pilar1_item1' => 'Solution Design',
+        'pilar1_item2' => 'Proof of Concept',
+
+        // PILAR 2: Formação & Certificação
+        'pilar2_title' => 'Training & Certification',
+        'pilar2_item1' => 'Official Pilot Course',
+        'pilar2_item2' => 'Safe Operation Training',
+
+        // PILAR 3: Manutenção & Suporte
+        'pilar3_title' => 'Maintenance & Support',
+        'pilar3_item1' => 'SLA Contracts',
+        'pilar3_item2' => 'System Integration',
+
+        // CTA FINAL
+        'cta_title' => 'Ready to go beyond the equipment?',
+        'cta_subtitle' => 'Talk to our consulting team and design your next project.',
+        'cta_button' => 'Speak with an Expert Now',
     ],
 ];
