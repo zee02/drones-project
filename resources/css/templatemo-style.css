@@ -589,7 +589,7 @@ section.banner {
     justify-content: center;
     flex-direction: column;
     border: none;
-    background-color: #f7f8fa; /* very light gray behind the image */
+    background-color: #dbdbd9; /* very light gray behind the image */
     border-radius: 8px;
     overflow: hidden;
     /* subtle shadow above and below for a lifted look */
@@ -647,10 +647,10 @@ section.banner {
 
 .popular-places .popular-item .thumb .text-content span {
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 300 !important;
     letter-spacing: 0.5px;
     display: block;
-    color: #333;
+    color: #333 !important;
 }
 
 .popular-places .popular-item .thumb .plus-button {

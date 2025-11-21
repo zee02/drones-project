@@ -1,0 +1,1 @@
+<?php /**PATH B:\Projetos\website\drones-project\resources\views/sub-pages/setores/agricultura.blade.php ENDPATH**/ ?>

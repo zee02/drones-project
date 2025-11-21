@@ -1,20 +1,15 @@
-
-
 <?php $__env->startSection('content'); ?>
     
     <section class="hero hero--solucoes" style="--hero-bg-image: url('<?php echo e(asset('img/solucoes2-img.jpg')); ?>');">
         <div class="hero__content">
-            
             <p class="hero__eyebrow"><?php echo e(__('messages.nav.solucoes')); ?> SkyDri</p>
 
             <h1 class="hero__title">
-                
                 <?php echo e(__('messages.hero.solucoes_header') ?? 'Diversas soluções à sua medida'); ?>
 
             </h1>
 
             <a href="#solucoes-detalhes" class="btn btn-primary hero__cta" data-scroll="#solucoes-detalhes">
-                
                 <?php echo e(__('messages.contact.specialist_button') ?? 'Falar com um especialista'); ?>
 
             </a>
@@ -26,7 +21,6 @@
         <div class="container">
             <div class="row justify-content-center">
 
-                
                 <h2 id="solucoes-titulo" class="solucoes-grid-title"><?php echo e(__('messages.services.title')); ?></h2>
 
             </div>
@@ -51,16 +45,24 @@
                         // Centralizar o 6º item na linha se houver 6
                         $offsetClass = ($isLastItem && count($sectors) % 3 === 0 && count($sectors) === 6) ? 'offset-md-4' : '';
 
-                        // O Slug do URL DEVE ser traduzido (Inovação e Precisão)
-                        // A slug é gerada a partir da tradução do título (ex: Agricultura & Floresta -> agriculture-forestry)
+                        // 1. Geração do Título Traduzido
                         $translatedTitle = __('messages.services.' . $sector['key'] . '_title');
+
+                        // 2. Geração do Slug (que AGORA é o NOME DA ROTA ESTÁTICA)
+                        // Ex: agricultura-floresta
                         $urlSlug = strtolower(str_replace([' & ', ' ', ' / '], ['-', '-', '-'], $translatedTitle));
+
+                        // 3. Obter o Locale Atual para o link
+                        $currentLocale = app()->getLocale();
+                        
+                        // NOTA: Os $params do Route::current() foram removidos do array_merge para limpeza.
                     ?>
 
                     <div class="col-lg-4 col-md-6 <?php echo e($offsetClass); ?> setor-card-wrapper">
 
                         
-                        <a href="<?php echo e(url('/solucoes/' . $urlSlug)); ?>" class="setor-card" data-bg-id="<?php echo e($sector['bg_id']); ?>">
+                        <a href="<?php echo e(route($urlSlug, ['locale' => $currentLocale])); ?>"
+                            class="setor-card" data-bg-id="<?php echo e($sector['bg_id']); ?>">
 
                             
                             <div class="card-bg-overlay"></div>
@@ -69,9 +71,6 @@
 
                             
                             <div class="card-content-wrap">
-                                <div class="card-icon">
-                                    <i class="fa <?php echo e($sector['icon']); ?>"></i>
-                                </div>
                                 
                                 <h3 class="card-title-heading"><?php echo e(__('messages.services.' . $sector['key'] . '_title')); ?></h3>
                                 
@@ -91,9 +90,11 @@
                     <h2 id="solucoes-titulo2" class="text-center mb-5"><?php echo e(__('messages.about_us.how_we_work_title')); ?></h2>
                     <div class="how-we-work-timeline">
                         
+                        
                         <div class="timeline-horizontal-line timeline-horizontal-line"></div>
 
                         <?php
+                            // Array de chaves de localização para os passos
                             $steps = [
                                 __('messages.about_us.step1'),
                                 __('messages.about_us.step2'),
@@ -115,7 +116,6 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                         
-                        <div class="timeline-horizontal-line bottom-line"></div>
                     </div>
                 </div>
             </div>

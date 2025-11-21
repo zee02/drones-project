@@ -4,16 +4,13 @@
     {{-- SECÇÃO HERO --}}
     <section class="hero hero--solucoes" style="--hero-bg-image: url('{{ asset('img/solucoes2-img.jpg') }}');">
         <div class="hero__content">
-            {{-- CHAVE ADICIONAL NECESSÁRIA: 'messages.solucoes_title' --}}
             <p class="hero__eyebrow">{{ __('messages.nav.solucoes') }} SkyDri</p>
 
             <h1 class="hero__title">
-                {{-- CHAVE ADICIONAL NECESSÁRIA: 'messages.solucoes_header' --}}
                 {{ __('messages.hero.solucoes_header') ?? 'Diversas soluções à sua medida' }}
             </h1>
 
             <a href="#solucoes-detalhes" class="btn btn-primary hero__cta" data-scroll="#solucoes-detalhes">
-                {{-- CHAVE ADICIONAL NECESSÁRIA: 'messages.contact.specialist_button' --}}
                 {{ __('messages.contact.specialist_button') ?? 'Falar com um especialista' }}
             </a>
         </div>
@@ -24,7 +21,6 @@
         <div class="container">
             <div class="row justify-content-center">
 
-                {{-- TRADUÇÃO: Usa messages.services.title --}}
                 <h2 id="solucoes-titulo" class="solucoes-grid-title">{{ __('messages.services.title') }}</h2>
 
             </div>
@@ -49,16 +45,24 @@
                         // Centralizar o 6º item na linha se houver 6
                         $offsetClass = ($isLastItem && count($sectors) % 3 === 0 && count($sectors) === 6) ? 'offset-md-4' : '';
 
-                        // O Slug do URL DEVE ser traduzido (Inovação e Precisão)
-                        // A slug é gerada a partir da tradução do título (ex: Agricultura & Floresta -> agriculture-forestry)
+                        // 1. Geração do Título Traduzido
                         $translatedTitle = __('messages.services.' . $sector['key'] . '_title');
+
+                        // 2. Geração do Slug (que AGORA é o NOME DA ROTA ESTÁTICA)
+                        // Ex: agricultura-floresta
                         $urlSlug = strtolower(str_replace([' & ', ' ', ' / '], ['-', '-', '-'], $translatedTitle));
+
+                        // 3. Obter o Locale Atual para o link
+                        $currentLocale = app()->getLocale();
+                        
+                        // NOTA: Os $params do Route::current() foram removidos do array_merge para limpeza.
                     @endphp
 
                     <div class="col-lg-4 col-md-6 {{ $offsetClass }} setor-card-wrapper">
 
-                        {{-- TRADUÇÃO: O URL usa a slug da tradução do título --}}
-                        <a href="{{ url('/solucoes/' . $urlSlug) }}" class="setor-card" data-bg-id="{{ $sector['bg_id'] }}">
+                        {{-- CRÍTICO: Usa o $urlSlug como o nome da rota estática (ex: 'agricultura-floresta') --}}
+                        <a href="{{ route($urlSlug, ['locale' => $currentLocale]) }}"
+                            class="setor-card" data-bg-id="{{ $sector['bg_id'] }}">
 
                             {{-- Imagem de Fundo e Overlay --}}
                             <div class="card-bg-overlay"></div>
@@ -67,9 +71,6 @@
 
                             {{-- Conteúdo do Cartão --}}
                             <div class="card-content-wrap">
-                                <div class="card-icon">
-                                    <i class="fa {{ $sector['icon'] }}"></i>
-                                </div>
                                 {{-- TRADUÇÃO: Título do Serviço --}}
                                 <h3 class="card-title-heading">{{ __('messages.services.' . $sector['key'] . '_title') }}</h3>
                                 {{-- TRADUÇÃO: Descrição do Serviço --}}
@@ -88,10 +89,12 @@
                 <div class="col-md-12">
                     <h2 id="solucoes-titulo2" class="text-center mb-5">{{ __('messages.about_us.how_we_work_title') }}</h2>
                     <div class="how-we-work-timeline">
-                        {{-- LINHA SUPERIOR DA TIMELINE --}}
+                        
+                        {{-- LINHA HORIZONTAL (Gerada por CSS ::before/::after) --}}
                         <div class="timeline-horizontal-line timeline-horizontal-line"></div>
 
                         @php
+                            // Array de chaves de localização para os passos
                             $steps = [
                                 __('messages.about_us.step1'),
                                 __('messages.about_us.step2'),
@@ -105,15 +108,14 @@
                                 <div class="step-number">{{ $index + 1 }}</div>
                                 <h3 class="step-title">{{ $step }}</h3>
 
-                                {{-- Adicionar seta apenas se não for o último passo --}}
+                                {{-- A seta deve ser gerada por CSS ::after no .timeline-step, exceto no último item --}}
                                 @if (!$loop->last)
                                     <div class="timeline-arrow"></div>
                                 @endif
                             </div>
                         @endforeach
 
-                        {{-- LINHA INFERIOR DA TIMELINE --}}
-                        <div class="timeline-horizontal-line bottom-line"></div>
+                        {{-- LINHA INFERIOR (Removida a redundância) --}}
                     </div>
                 </div>
             </div>

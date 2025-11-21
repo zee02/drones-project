@@ -12,18 +12,18 @@
     
     <link rel="icon" href="<?php echo e(asset('img/logo.png')); ?>" type="image/x-icon">
     <link rel="shortcut icon" href="<?php echo e(asset('img/logo.png')); ?>" type="image/x-icon">
-
-    
     <link rel="apple-touch-icon" href="<?php echo e(asset('img/logo.png')); ?>">
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    
     <script src="<?php echo e(asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')); ?>"></script>
 
     
     <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
+
+    
+    <?php echo $__env->yieldPushContent('styles'); ?>
 </head>
 
 <body>
@@ -35,11 +35,9 @@
         <?php echo $__env->yieldContent('content'); ?>
     </main>
 
-    
     <?php echo $__env->make('layouts.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
-    <?php echo $__env->yieldPushContent('styles'); ?>
-
+    
     <?php echo $__env->yieldPushContent('scripts'); ?>
 </body>
 
