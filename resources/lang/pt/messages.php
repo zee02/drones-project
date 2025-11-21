@@ -99,17 +99,42 @@ return [
         'design_by' => 'Feito por: ',
     ],
 
+    'servicos_page' => [
+        'hero_title_p1' => 'Soluções de',
+        'hero_title_p2' => 'Agricultura de Precisão',
+        'hero_title_p3' => 'para o futuro.',
+        'hero_cta' => 'Ver Soluções',
+
+        'pillars_title' => 'Os Nossos Pilares',
+
+        'pilar1_title' => 'Consultoria & Projeto',
+        'pilar1_item1' => 'Análise de terreno',
+        'pilar1_item2' => 'Planeamento de voo',
+
+        'pilar2_title' => 'Formação',
+        'pilar2_item1' => 'Curso A1/A3',
+        'pilar2_item2' => 'Certificação ANAC',
+
+        'pilar3_title' => 'Manutenção',
+        'pilar3_item1' => 'Reparação de Hardware',
+        'pilar3_item2' => 'Atualização de Software',
+
+        'cta_title' => 'Pronto para começar?',
+        'cta_subtitle' => 'Fale com os nossos especialistas.',
+        'cta_button' => 'Contactar Agora',
+    ],
+
     // ===================================================================================
     // NOVAS CHAVES PARA O CONTEXTO DINÂMICO/ESTÁTICO
     // ===================================================================================
-    
+
     'servicos' => [
         'index' => [ // Chave para a página de índice /servicos
             'hero_title_p1' => 'Na SKYDRI, vendemos',
             'hero_title_p2' => 'soluções e serviços',
             'hero_title_p3' => ', não apenas equipamentos.',
             'hero_cta' => 'As Nossas Soluções',
-            
+
             'pillars_title' => 'Os Nossos Pilares de Excelência',
             'pilar1_title' => 'Consultoria & Projeto',
             'pilar1_item1' => 'Desenho de Solução',
@@ -126,16 +151,16 @@ return [
             'cta_button' => 'Falar com um Especialista',
         ],
     ],
-    
+
     // CHAVES DE DETALHE DOS SETORES
     'setor' => [
         // ---------------------------------------------------------------------
         // 1. AGRICULTURA E FLORESTA (agricultura-floresta)
         // ---------------------------------------------------------------------
-        'agricultura' => [ 
+        'agricultura' => [
             'titulo_seccao' => 'Soluções de Precisão para Agricultura & Floresta 🌾',
             'tagline' => 'Maximize a sua produtividade, otimize o uso de água e detecte problemas de saúde vegetal com dados de drones de alta resolução.',
-            
+
             'nav_problema' => 'Desafios Atuais',
             'nav_solucao' => 'Solução de Sensorização',
             'nav_casos' => 'Casos de Uso (NDVI/NDRE)',
@@ -146,7 +171,7 @@ return [
 
             'problema_titulo' => 'O Desafio da Inspeção Manual e Perdas na Colheita',
             'problema_contexto' => 'A monitorização tradicional de campos vastos é lenta, dispendiosa e ineficaz para identificar problemas localizados (doenças, stress hídrico) antes que afetem criticamente a colheita. Isto leva a um uso excessivo de recursos (água, pesticidas).',
-            
+
             'solucao_titulo' => 'Solução SKYDRI: Diagnóstico Multiespectral',
             'solucao_hardware' => 'Drones robustos (M300/M350) e câmaras multiespectrais (MicaSense RedEdge) para medições **NDVI/NDRE**.',
             'solucao_software' => 'Plataformas de análise de imagem baseadas em IA (DroneDeploy, Pix4D) para mapeamento de saúde vegetal, contagem de plantas e análise de stress hídrico.',
@@ -166,18 +191,18 @@ return [
             'faq_titulo' => 'Perguntas Frequentes (FAQ)',
             'faq1_pergunta' => 'Os drones substituem a análise de solo?',
             'faq1_resposta' => 'Não. Os drones complementam a análise de solo. Eles identificam *onde* o problema está, permitindo que a análise de solo seja feita de forma cirúrgica e eficiente.',
-            
+
             'cta_final_titulo' => 'Transforme a sua exploração agrícola em Agricultura 4.0.',
             'cta_final_button' => 'Falar com um Agrónomo Especialista',
         ],
-        
+
         // ---------------------------------------------------------------------
         // 2. ENERGIA & UTILITIES (energia-utilities)
         // ---------------------------------------------------------------------
-        'energia' => [ 
+        'energia' => [
             'titulo_seccao' => 'Inspeção e Manutenção para Energia & Utilities ⚡',
             'tagline' => 'Detete falhas, minimize riscos e otimize a manutenção preditiva em infraestruturas críticas (eólicas, solares, linhas de transmissão).',
-            
+
             'nav_problema' => 'Riscos de Falha',
             'nav_solucao' => 'Solução de Termografia',
             'nav_casos' => 'Casos de Uso',
@@ -188,7 +213,7 @@ return [
 
             'problema_titulo' => 'Desafios na Inspeção de Ativos Críticos',
             'problema_contexto' => 'A inspeção humana de turbinas eólicas ou painéis solares é perigosa, lenta e sujeita a erros. Falhas não detectadas a tempo resultam em tempo de inatividade dispendioso e perdas de receita significativas.',
-            
+
             'solucao_titulo' => 'Solução SKYDRI: Inspeção Termográfica (Infravermelho)',
             'solucao_hardware' => 'Drones de alta estabilidade (Matrice 30T) equipados com câmaras térmicas (Zenmuse H20T) que identificam anomalias de temperatura (hotspots).',
             'solucao_software' => 'Plataformas de análise de imagem baseadas em IA (DroneDeploy, Pix4D) que processam dados térmicos e geram relatórios automatizados de defeitos.',
@@ -208,18 +233,18 @@ return [
             'faq_titulo' => 'Perguntas Frequentes (FAQ)',
             'faq1_pergunta' => 'Os drones conseguem inspecionar ativos em condições de mau tempo?',
             'faq1_resposta' => 'Os drones são resistentes a ventos moderados e chuva leve, mas a inspeção ideal é feita em condições estáveis para garantir a precisão dos dados térmicos.',
-            
+
             'cta_final_titulo' => 'Reduza o risco de falhas em ativos. Peça uma demonstração de termografia.',
             'cta_final_button' => 'Falar com um Engenheiro Especialista',
         ],
-        
+
         // ---------------------------------------------------------------------
         // 3. CONSTRUÇÃO & INFRAESTRUTURAS (construcao-infraestruturas)
         // ---------------------------------------------------------------------
-        'construcao' => [ 
+        'construcao' => [
             'titulo_seccao' => 'Levantamento e Monitorização para Construção e Infraestruturas 🏗️',
             'tagline' => 'Melhore a precisão do planeamento topográfico, monitorize o progresso da obra em tempo real e inspecione estruturas complexas.',
-            
+
             'nav_problema' => 'Desafios de Topografia',
             'nav_solucao' => 'Solução de Mapeamento 3D',
             'nav_casos' => 'Casos de Uso',
@@ -230,7 +255,7 @@ return [
 
             'problema_titulo' => 'Limitações da Topografia Tradicional e da Monitorização',
             'problema_contexto' => 'Levantamentos topográficos com métodos tradicionais são demorados e caros. A monitorização do progresso da obra é descontínua, dificultando a gestão de prazos e orçamentos (BIM).',
-            
+
             'solucao_titulo' => 'Solução SKYDRI: Mapeamento 3D e Monitorização de Obra',
             'solucao_hardware' => 'Drones RTK/PPK (Phantom 4 RTK, M300) que oferecem precisão centimétrica para levantamentos e calibração BIM.',
             'solucao_software' => 'Software de fotogrametria (Pix4Dmapper, RealityCapture) para criar modelos 3D, nuvens de pontos e medições de volume precisas.',
@@ -250,18 +275,18 @@ return [
             'faq_titulo' => 'Perguntas Frequentes (FAQ)',
             'faq1_pergunta' => 'Os dados do drone podem ser usados diretamente no meu software BIM?',
             'faq1_resposta' => 'Sim. O nosso software exporta nuvens de pontos e malhas 3D em formatos compatíveis (DWG, DXF, LAS) que se integram perfeitamente com a maioria dos softwares BIM/CAD.',
-            
+
             'cta_final_titulo' => 'Garanta a precisão da sua próxima obra. Peça uma consulta de topografia.',
             'cta_final_button' => 'Falar com um Engenheiro Civil Especialista',
         ],
-        
+
         // ---------------------------------------------------------------------
         // 4. GOVERNO & PROTEÇÃO CIVIL (governo-protecao-civil)
         // ---------------------------------------------------------------------
-        'governo' => [ 
+        'governo' => [
             'titulo_seccao' => 'Resposta Rápida e Segurança Pública (Governo & Proteção Civil) 🚨',
             'tagline' => 'Aumente a consciência situacional, melhore a resposta a emergências e apoie as operações de busca e resgate.',
-            
+
             'nav_problema' => 'Limitações de Resposta',
             'nav_solucao' => 'Solução de Consciência Situacional',
             'nav_casos' => 'Casos de Uso SAR/Segurança',
@@ -272,7 +297,7 @@ return [
 
             'problema_titulo' => 'A Falta de Informação em Tempo Real em Emergências',
             'problema_contexto' => 'Em cenários de busca e resgate (SAR) ou incêndios, a obtenção de imagens aéreas imediatas é difícil. A falta de consciência situacional atrasa a resposta e põe vidas em risco.',
-            
+
             'solucao_titulo' => 'Solução SKYDRI: Imagem Aérea em Tempo Real (ISR)',
             'solucao_hardware' => 'Drones portáteis e rápidos (Matrice 30, Mavic 3 Enterprise) com câmaras de zoom ótico e visão noturna/termografia para operações 24/7.',
             'solucao_software' => 'Plataformas de transmissão de vídeo (Live Streaming) para comando e controlo, e software para mapeamento rápido de zonas de desastre.',
@@ -292,7 +317,7 @@ return [
             'faq_titulo' => 'Perguntas Frequentes (FAQ)',
             'faq1_pergunta' => 'Os drones podem voar em zonas de exclusão aérea durante emergências?',
             'faq1_resposta' => 'Em Portugal, as forças de segurança e proteção civil podem obter autorizações de emergência imediatas para operar em zonas restritas, mediante comunicação com a ANAC e o centro de comando.',
-            
+
             'cta_final_titulo' => 'Prepare a sua agência para a próxima emergência. Peça uma demonstração.',
             'cta_final_button' => 'Falar com um Especialista em Segurança',
         ],
