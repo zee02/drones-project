@@ -20,8 +20,6 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
-/bootstrap/cache/*
-
 /storage/framework/cache/*
 /storage/framework/sessions/*
 /storage/framework/testing/*
