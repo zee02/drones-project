@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="IE=edge,chrome=1">
-
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
     <title>SkyDri</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{ asset('img/logo.png') }}">
