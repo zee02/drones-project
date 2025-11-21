@@ -10,6 +10,7 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    base: '/',
     
     server: {
         hmr: process.env.LARAVEL_APP_ENV === 'production' ? false : {
