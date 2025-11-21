@@ -8,7 +8,7 @@
     if (typeof define === "function" && define.amd) {
         define(["jquery"], factory);
     } else if (typeof exports === 'object') {
-        factory(require('jquery'));
+        factory(window.jQuery);
     } else {
         factory(jQuery);
     }
